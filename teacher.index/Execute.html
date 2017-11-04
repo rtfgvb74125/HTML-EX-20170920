@@ -1,10 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>時文中，亞洲大學，網頁</title>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                padding-top: 20px;
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #3995ff;
+                color: #ff6f32;
+                padding: 15px;
+                font-size: 2em;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height:auto;}
+            }
+        </style>
+    </head>
 <body>
 
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首頁</a></li>
+                <li ><a href="resune.html">簡歷</a></li>
+                <li><a href="Academic%20service.html">學術服務</a></li>
+                <li><a href="Administrative%20services.html">行政服務</a></li>
+                <li class="active"><a href="Academic%20Works.html">學術著作</a></li>
+                <li><a href="Execute.html">執行計畫</a></li>
+                <li><a href="Postgraduate.html">指導研究生</a></li>
+                <li><a href="Commonlink.html">常用連結</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-------->
+    <div class="container">
+        <ul class="nav nav-pills nav-stacked col-md-2">
+            <li class="active"><a href="#tab_a" data-toggle="pill">Pill A</a></li>
+            <li><a href="#tab_b" data-toggle="pill">Pill B</a></li>
+            <li><a href="#tab_c" data-toggle="pill">Pill C</a></li>
+            <li><a href="#tab_d" data-toggle="pill">Pill D</a></li>
+        </ul>
+        <div class="tab-content col-md-10">
+            <div class="tab-pane active" id="tab_a">
+                <h4>Pane A</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                    ac turpis egestas.</p>
+            </div>
+            <div class="tab-pane" id="tab_b">
+                <h4>Pane B</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                    ac turpis egestas.</p>
+            </div>
+            <div class="tab-pane" id="tab_c">
+                <h4>Pane C</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                    ac turpis egestas.</p>
+            </div>
+            <div class="tab-pane" id="tab_d">
+                <h4>Pane D</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                    ac turpis egestas.</p>
+            </div>
+        </div><!-- tab content -->
+    </div><!-- end of container -->
+    <footer class="container-fluid text-center">
+        <p>105021056 @ live.asia.edu.tw</p>
+    </footer>
+
+</div>
 </body>
 </html>
