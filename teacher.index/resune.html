@@ -10,6 +10,7 @@
         <title>Bootstrap Example</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/1.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -46,6 +47,26 @@
                 }
                 .row.content {height:auto;}
             }
+            .h1font{
+                font-size: 3em;
+            }
+            .h3font{
+                font-size: 2em;
+            }
+            .fontsize{
+                font-size: large;
+            }
+            .coursestyle{
+                background: #daa520;
+                font-size: large;
+                height: 40px;
+
+            }
+            .coursestyle2{
+                background: #f5deb3;
+                font-size: large;
+                height: 40px;
+            }
         </style>
     </head>
 <body>
@@ -81,21 +102,462 @@
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
 
-        </div>
+            <ul class="nav nav-pills nav-stacked col-md-2">
+                <li class="active"><a href="#tab_a" data-toggle="pill">基本資料</a></li>
+                <li><a href="#tab_b" data-toggle="pill">獲獎/Award</a></li>
+                <li><a href="#tab_c" data-toggle="pill">授課課程/Course</a></li>
+                <li><a href="#tab_d" data-toggle="pill">指導論文/Thesis advising</a></li>
+            </ul>
+
         <div class="col-sm-8 text-left">
-            <h1>Welcome</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1>教學歷程檔案</h1>
             <hr>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
-        </div>
-        <div class="col-sm-2 sidenav">
+            <div class="tab-content col-md-10">
+                <div class="tab-pane active" id="tab_a">
+                    <h2 class="h1font">Welcome</h2>
+                    <h3 class="h3font">基本資料</h3>
+                    <ul>
+                        <li class="fontsize">姓名：時文中／Wen-Chung Shih</li>
+                        <li class="fontsize">任職單位：資訊工程學系 副教授</li>
+                        <li class="fontsize">E-mail：wjshih@asia.edu.tw</li>
+                    </ul>
+                    <h3 class="h3font">學歷</h3>
+                    <ul>
+                        <li class="fontsize">交通大學 資訊科學 博士</li>
+                    </ul>
+                    <h3 class="h3font">專長</h3>
+                    <ul>
+                        <li class="fontsize">行動與無所不在學習</li>
+                        <li class="fontsize">平行與分散處理</li>
+                        <li class="fontsize">數位學習內容</li>
+                        <li class="fontsize">人工智慧</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="tab_b">
+                    <h2 class="h1font">獲獎/Award</h2>
+                        <table border="2" width="700">
+                            <tr bgcolor="#daa520" class="fontsize">
+                                <td width="10%" align="center" height="40">1.</td>
+                                <td width="90%" >國科會103年度補助『大專校院獎勵特殊優秀人才措施』，國科會，2014.08.1</td>
+                            </tr>
+                            <tr bgcolor="#f5deb3" class="fontsize">
+                                <td align="center" height="40">2.</td>
+                                <td >國科會102年度補助『大專校院獎勵特殊優秀人才措施』，國科會，2013.08.1</td>
+                            </tr>
+                            <tr bgcolor="#daa520" class="fontsize">
+                                <td width="10%" align="center" height="40">3.</td>
+                                <td width="90%" >國科會101年度補助『大專校院獎勵特殊優秀人才措施』，國科會，2012.08.1</td>
+                            </tr>
+                            <tr bgcolor="#f5deb3"class="fontsize">
+                                <td  align="center" height="40">4.</td>
+                                <td  >國科會100年度補助『優秀年輕學者研究計畫』(二年期計畫)，國科會，2011.08.1</td>
+                            </tr>
+                            <tr bgcolor="#daa520" class="fontsize">
+                                <td  align="center" height="40">5.</td>
+                                <td  >98學年度校級優良導師，本校，2011.03.19</td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="tab-pane" id="tab_c">
+                    <h2 class="h1font">授課課程/Course</h2>
+                        <nav class="nav navbar-default">
+                            <div class="container-fluid">
+                                <ul class="nav navbar-nav">
+                                    <li><a data-toggle="tab" href="#10">1~10</a></li>
+                                    <li><a data-toggle="tab" href="#20">11~20</a></li>
+                                    <li><a data-toggle="tab" href="#30">21~30</a></li>
+                                    <li><a data-toggle="tab" href="#40">31~40</a></li>
+                                    <li><a data-toggle="tab" href="#50">41~50</a></li>
+                                    <li><a data-toggle="tab" href="#60">50~60</a></li>
+                                    <li><a data-toggle="tab" href="#70">61~70</a></li>
+                                    <li><a data-toggle="tab" href="#80">71~80</a></li>
+                                    <li><a data-toggle="tab" href="#90">81~90</a></li>
+                                    <li><a data-toggle="tab" href="#100">91~100</a></li>
+                                    <li><a data-toggle="tab" href="#110">101~110</a></li>
+                                    <li><a data-toggle="tab" href="#120">111~120</a></li>
+                                    <li><a data-toggle="tab" href="#130">121~130</a></li>
+                                    <li><a data-toggle="tab" href="#140">131~140</a></li>
 
+                                </ul>
+                            </div>
+                        </nav>
+                    <div class="tab-content">
+                        <div id="10" class="tab-pane fade in active">
+                            <h3>1~10</h3>
+                            <table border="1"width="700">
+                                <tr class="coursestyle">
+                                    <td width="10%" align="center">1.</td>
+                                    <td width="90%"><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00096&mCos_Class=A&mSmtr=1061">(大學日間部 )行動學習【第106學年第1學期：A班】
+                                        了解行動學習的基本觀念，並能應用於行動學習教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">2.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=ES300157&mCos_Class=A&mSmtr=1061">(大學日間部 )數位教學設計【第106學年第1學期：A班】
+                                        了解數位教學設計相關的基本觀念，並能應用於數位教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">3.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=ES300124&mCos_Class=A&mSmtr=1061">	(大學日間部 )數位學習概論【第106學年第1學期：A班】
+                                        了解數位學習相關的基本觀念。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">4.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400028&mCos_Class=A&mSmtr=1061">(碩士在職專班 )碩士論文【第106學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">5.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320057&mCos_Class=A&mSmtr=1061">(大學日間部 )畢業專題(二)【第106學年第1學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">6.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310057&mCos_Class=A&mSmtr=1061">(大學日間部 )畢業專題(二)【第106學年第1學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">7.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300047&mCos_Class=A&mSmtr=1061">(大學日間部 )資工教學實務課程(五)【第106學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">8.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300003&mCos_Class=A&mSmtr=1061">(大學日間部 )學輔時間(四)【第106學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">9.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE200046&mCos_Class=A&mSmtr=1061">(研究所碩士班 )碩士論文【第106學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">10.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE100009&mCos_Class=A&mSmtr=1061">(研究所博士班 )博士論文【第106學年第1學期：A班】</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="20" class="tab-pane fade">
+                            <h3>11~20</h3>
+                            <table border="1" width="700">
+                                <tr class="coursestyle">
+                                    <td align="center" width="10%">11.</td>
+                                    <td width="90%"><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00092&mCos_Class=A&mSmtr=1052">(大學日間部 )學輔時間(四)【第105學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">12.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00050&mCos_Class=A&mSmtr=1052">(大學日間部 )多媒體數位學習【第105學年第2學期：A班】
+                                        了解多媒體與數位學習的基本觀念，並能應用於數位教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">13.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=ES300181&mCos_Class=A&mSmtr=1052">(大學日間部 )數位教材設計與製作【第105學年第2學期：A班】
+                                        了解數位教學設計相關的基本觀念，並能應用於數位教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">14.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=ES300158&mCos_Class=A&mSmtr=1052">(大學日間部 )數位學習系統實務【第105學年第2學期：A班】
+                                        (1)了解數位學習基本觀念； (2)了解數位學習系統實務技術。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">15.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400028&mCos_Class=A&mSmtr=1052">(碩士在職專班 )碩士論文【第105學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">16.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320057&mCos_Class=A&mSmtr=1052">(大學日間部 )畢業專題(二)【第105學年第2學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">17.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310056&mCos_Class=A&mSmtr=1052">(大學日間部 )畢業專題(一)【第105學年第2學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">18.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300009&mCos_Class=A&mSmtr=1052">(大學日間部 )資工教學實務課程(四)【第105學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">19.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300003&mCos_Class=A&mSmtr=1052">(大學日間部 )學輔時間(四)【第105學年第2學期：A班</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">20.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE200201&mCos_Class=A&mSmtr=1052">(研究所碩士班 )實務實習【第105學年第2學期：A班】
+                                        協助系上學生了解未來的相關工作發展及實務、技能。</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="30" class="tab-pane fade">
+                            <h3>21~30</h3>
+                            <table border="1" width="700">
+                                <tr class="coursestyle">
+                                    <td align="center" width="10%">21.</td>
+                                    <td width="90%"><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE200046&mCos_Class=A&mSmtr=1052">(研究所碩士班 )碩士論文【第105學年第2學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">22.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE100009&mCos_Class=A&mSmtr=1052">(研究所博士班 )博士論文【第105學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">23.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00092&mCos_Class=A&mSmtr=1051">(大學日間部 )學輔時間(四)【第105學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">24.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00049&mCos_Class=A&mSmtr=1051">(大學日間部 )U化學習【第105學年第1學期：A班】
+                                        了解U化學習的基本觀念，並能應用於U化學習教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">25.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00045&mCos_Class=A&mSmtr=1051">(大學日間部 )數位教學設計【第105學年第1學期：A班】
+                                        了解數位教學設計相關的基本觀念，並能應用於數位教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">26.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=ES300124&mCos_Class=A&mSmtr=1051">(大學日間部 )數位學習概論【第105學年第1學期：A班】
+                                        了解數位學習相關的基本觀念。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">27.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400028&mCos_Class=A&mSmtr=1051">(碩士在職專班 )碩士論文【第105學年第1學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">28.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320984&mCos_Class=A&mSmtr=1051">(大學日間部 )產業實務實習(一) (3+1分流)【第105學年第1學期：A班】
+                                        協助系上學生了解未來的相關工作發展及實務、技能。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">29.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320982&mCos_Class=A&mSmtr=1051">(大學日間部 )產業學習(一) (3+1分流)【第105學年第1學期：A班】
+                                        協助系上學生了解未來的相關工作發展及實務、技能。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">30.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320980&mCos_Class=A&mSmtr=1051">(大學日間部 )產業服務(一) (3+1分流)【第105學年第1學期：A班】
+                                        協助系上學生了解未來的相關工作發展及實務、技能。</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="40" class="tab-pane fade">
+                            <h3>31~40</h3>
+                            <table border="1" width="700">
+                                <tr class="coursestyle">
+                                    <td align="center" width="10%">31.</td>
+                                    <td width="90%"><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320978&mCos_Class=A&mSmtr=1051">(大學日間部 )產業專題實作(3+1分流)【第105學年第1學期：A班】
+                                        協助系上學生了解未來的相關工作發展及實務、技能。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">32.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310057&mCos_Class=B&mSmtr=1051">(大學日間部 )畢業專題(二)【第105學年第1學期：B班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">33.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310057&mCos_Class=A&mSmtr=1051">(大學日間部 )畢業專題(二)【第105學年第1學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">34.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300006&mCos_Class=A&mSmtr=1051">(大學日間部 )資工教學實務課程(三)【第105學年第1學期：A班】
+                                        落實時理論與實務之應用，增加學生實務經驗。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">35.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300003&mCos_Class=A&mSmtr=1051">(大學日間部 )學輔時間(四)【第105學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">36.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE200046&mCos_Class=A&mSmtr=1051">(研究所碩士班 )碩士論文【第105學年第1學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">37.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE100009&mCos_Class=A&mSmtr=1051">(研究所博士班 )博士論文【第105學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">38.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00091&mCos_Class=A&mSmtr=1042">(大學日間部 )學輔時間(三)【第104學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">39.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00050&mCos_Class=A&mSmtr=1042">(大學日間部 )多媒體數位學習【第104學年第2學期：A班】
+                                        了解多媒體與數位學習的基本觀念，並能應用於數位教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">40.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00047&mCos_Class=A&mSmtr=1042">(大學日間部 )數位學習系統實務【第104學年第2學期：A班】
+                                        (1)了解數位學習基本觀念； (2)了解數位學習系統實務技術。</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="50" class="tab-pane fade">
+                            <h3>41~50</h3>
+                            <table border="1" width="700">
+                                <tr class="coursestyle">
+                                    <td align="center" width="10%">41.</td>
+                                    <td width="90%"><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400028&mCos_Class=B&mSmtr=1042">(碩士在職專班 )碩士論文【第104學年第2學期：B班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">42.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400028&mCos_Class=A&mSmtr=1042">(碩士在職專班 )碩士論文【第104學年第2學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">43.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320056&mCos_Class=A&mSmtr=1042">(大學日間部 )畢業專題(一)【第104學年第2學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">44.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310057&mCos_Class=A&mSmtr=1042">(大學日間部 )畢業專題(二)【第104學年第2學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">45.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310056&mCos_Class=A&mSmtr=1042">(大學日間部 )畢業專題(一)【第104學年第2學期：A班】
+                                        探討資工領域方面的專題研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">46.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300005&mCos_Class=A&mSmtr=1042">(大學日間部 )資工教學實務課程(二)【第104學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">47.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE300003&mCos_Class=A&mSmtr=1042">(大學日間部 )學輔時間(四)【第104學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">48.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE200200&mCos_Class=A&mSmtr=1042">(研究所碩士班 )碩士論文【第104學年第2學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">49.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE200046&mCos_Class=A&mSmtr=1042">(研究所碩士班 )碩士論文【第104學年第2學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">50.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE100011&mCos_Class=A&mSmtr=1042">(研究所博士班 )博士論文【第104學年第2學期：A班】</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="60" class="tab-pane fade">
+                            <h3>51~60</h3>
+                            <table border="1" width="700">
+                                <tr class="coursestyle">
+                                    <td align="center" width="10%">51.</td>
+                                    <td width="90%"><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE100010&mCos_Class=A&mSmtr=1042">(研究所博士班 )博士論文【第104學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">52.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE100009&mCos_Class=A&mSmtr=1042">(研究所博士班 )博士論文【第104學年第2學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">53.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00091&mCos_Class=A&mSmtr=1041">(大學日間部 )學輔時間(三)【第104學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">54.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00049&mCos_Class=A&mSmtr=1041">(大學日間部 )U化學習【第104學年第1學期：A班】
+                                        了解U化學習的基本觀念，並能應用於U化學習教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">55.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00045&mCos_Class=A&mSmtr=1041">(大學日間部 )數位教學設計【第104學年第1學期：A班】
+                                        了解數位教學設計相關的基本觀念，並能應用於數位教材的設計。</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">56.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=INU00044&mCos_Class=A&mSmtr=1041">(大學日間部 )數位學習概論【第104學年第1學期：A班】
+                                        了解數位學習相關的基本觀念。</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">57.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400121&mCos_Class=A&mSmtr=1041">(碩士在職專班 )碩士論文【第104學年第1學期：A班】</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">58.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE400028&mCos_Class=A&mSmtr=1041">(碩士在職專班 )碩士論文【第104學年第1學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle">
+                                    <td align="center">59.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE320057&mCos_Class=A&mSmtr=1041">(大學日間部 )畢業專題(二)【第104學年第1學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                                <tr class="coursestyle2">
+                                    <td align="center">60.</td>
+                                    <td><a href="https://webs.asia.edu.tw/courseinfo/course_outline_S2.asp?mCos_id=EE310057&mCos_Class=A&mSmtr=1041">(大學日間部 )畢業專題(二)【第104學年第1學期：A班】
+                                        探討資工領域方面的研究技巧</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="70" class="tab-pane fade">
+                            <h3>61~70</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="80" class="tab-pane fade">
+                            <h3>71~80</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="90" class="tab-pane fade">
+                            <h3>81~90</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="100" class="tab-pane fade">
+                            <h3>91~100</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="110" class="tab-pane fade">
+                            <h3>101~110</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="120" class="tab-pane fade">
+                            <h3>111~120</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="130" class="tab-pane fade">
+                            <h3>121~130</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                        <div id="140" class="tab-pane fade">
+                            <h3>131~140</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+                    </div>
+
+                    </div>
+                <div class="tab-pane" id="tab_d">
+                    <h2 class="h1font">指導論文/Thesis advising</h2>
+                    <table border="1" width="700">
+                        <tr style="text-align: justify;background:#BBFFFF">
+                            <td width="10%" align="center">1.</td>
+                            <td width="90%">1052：張以勤
+                                就業學程對於大學生學習成效與態度影響之研究<br/>
+                                A Study of Impact of an Employment Program for College Students on Learning Performance and Attitudes</td>
+                        </tr>
+                        <tr style="text-align: justify;background:#ADFEDC">
+                            <td align="center">2.</td>
+                            <td>1052：黃沛禎
+                                應用3D動畫於生物化學課程教學之研究<br/>
+                                A Study of Applying 3D Instructional Animations to a Biochemistry Course</td>
+                        </tr>
+                        <tr style="text-align: justify;background:#BBFFFF">
+                            <td align="center">3.</td>
+                            <td>1052：黃沛禎
+                                應用3D動畫於生物化學課程教學之研究<br/>
+                                A Study of Applying 3D Instructional Animations to a Biochemistry Course</td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+
+            </div><!-- tab content -->
         </div>
+
     </div>
 </div>
+
+
 
 <footer class="container-fluid text-center">
     <p>105021056 @ live.asia.edu.tw</p>
