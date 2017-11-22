@@ -31,7 +31,7 @@ $B = $_POST[b];
 <?php
 echo "<h1>$var</h1>"
 ?>
-<table border="1" width="100px">
+<table border="1" width="100px" align="center">
     <?php
     for($i = 1;$i<=$n;$i++){
         echo "<tr align='center'><span style='background: rgb($R,$G,$B)'>";
