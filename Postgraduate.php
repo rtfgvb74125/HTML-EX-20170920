@@ -1,3 +1,11 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: warren
+ * Date: 2017/12/3
+ * Time: 下午 11:05
+ */include ("funtion.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,16 +66,17 @@
             <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="resune.html">簡歷</a></li>
-                <li><a href="Academic%20service.html">學術服務</a></li>
-                <li><a href="Administrative%20services.html">行政服務</a></li>
-                <li><a href="Academic%20Works.html">學術著作</a></li>
-                <li><a href="Execute.html">執行計畫</a></li>
-                <li class="active"><a href="Postgraduate.html">指導研究生</a></li>
-                <li><a href="Commonlink.html">常用連結</a></li>
-            </ul>
+            <?php varbar(7)?>
+<!--            <ul class="nav navbar-nav">-->
+<!--                <li><a href="index.html">首頁</a></li>-->
+<!--                <li><a href="resune.html">簡歷</a></li>-->
+<!--                <li><a href="Academic%20service.html">學術服務</a></li>-->
+<!--                <li><a href="Administrative%20services.html">行政服務</a></li>-->
+<!--                <li><a href="Academic%20Works.html">學術著作</a></li>-->
+<!--                <li><a href="Execute.html">執行計畫</a></li>-->
+<!--                <li class="active"><a href="Postgraduate.html">指導研究生</a></li>-->
+<!--                <li><a href="Commonlink.html">常用連結</a></li>-->
+<!--            </ul>-->
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
@@ -157,53 +166,53 @@
                     </table>
                 </div>
                 <div id="3" class="tab-pane fade">
-                   <table border="2" width="800" align="center" class="table_font_size">
-                       <tr>
-                           <td width="10%" align="center" rowspan="7">一般生</td>
-                           <td width="10%" align="center" rowspan="2">青瑜</td>
-                           <td width="80%">應用Facebook與操作式虛擬教具於課後輔導 之研究-以國小五年級等值分數為例(AIT 2012)</td>
-                       </tr>
-                       <tr>
-                           <td>應用基於認知衝突理論的虛擬教具於課後輔導之研究-以國小四年級則運算單元為例(碩士論文)</td>
-                       </tr>
-                       <tr>
-                           <td align="center" rowspan="3">張傑</td>
-                           <td>互動式故事敘說應用於校園霸凌預防之研究(TWELF 2012)</td>
-                       </tr>
-                       <tr>
-                           <td>互動式故事板應用於衝突管理學習之先導型研究 - 以校園霸凌預防為例(GCCCE 2012)</td>
-                       </tr>
-                       <tr>
-                           <td>基於多階段圖的故事敘說動畫製作之研究 -以校園霸凌預防為例(碩士論文)</td>
-                       </tr>
-                       <tr>
-                           <td align="center" rowspan="2">叡孟</td>
-                           <td>互動式遊戲應用於霸凌預防情緒管理之研究(GCCCE 2013)</td>
-                       </tr>
-                       <tr><td>互動式遊戲應用於霸凌預防情緒管理之研究(GCCCE 2013)(碩士論文)</td></tr>
-                   </table>
+                    <table border="2" width="800" align="center" class="table_font_size">
+                        <tr>
+                            <td width="10%" align="center" rowspan="7">一般生</td>
+                            <td width="10%" align="center" rowspan="2">青瑜</td>
+                            <td width="80%">應用Facebook與操作式虛擬教具於課後輔導 之研究-以國小五年級等值分數為例(AIT 2012)</td>
+                        </tr>
+                        <tr>
+                            <td>應用基於認知衝突理論的虛擬教具於課後輔導之研究-以國小四年級則運算單元為例(碩士論文)</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="3">張傑</td>
+                            <td>互動式故事敘說應用於校園霸凌預防之研究(TWELF 2012)</td>
+                        </tr>
+                        <tr>
+                            <td>互動式故事板應用於衝突管理學習之先導型研究 - 以校園霸凌預防為例(GCCCE 2012)</td>
+                        </tr>
+                        <tr>
+                            <td>基於多階段圖的故事敘說動畫製作之研究 -以校園霸凌預防為例(碩士論文)</td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="2">叡孟</td>
+                            <td>互動式遊戲應用於霸凌預防情緒管理之研究(GCCCE 2013)</td>
+                        </tr>
+                        <tr><td>互動式遊戲應用於霸凌預防情緒管理之研究(GCCCE 2013)(碩士論文)</td></tr>
+                    </table>
                 </div>
                 <div id="4" class="tab-pane fade">
-                   <table border="2" width="800" align="center" class="table_font_size">
-                       <tr>
-                           <td width="10%" align="center" rowspan="8">一般生</td>
-                           <td width="10%" align="center" rowspan="2">育銘</td>
-                           <td width="80%">虛擬教具資源庫之研製－應用於國小數學志工課輔(TWELF 2013)</td>
-                       </tr>
-                       <tr><td>虛擬教具資源庫之研製－應用於國小數學志工課輔(TWELF 2013)(碩士論文)</td></tr>
-                       <tr>
-                           <td align="center" rowspan="3">蟬薇</td>
-                           <td>應用互動式情境模擬系統於課輔志工訓練之研究：以國小三年級數學減法為例(NCS 2013)</td>
-                       </tr>
-                       <tr><td>應用互動式情境模擬系統於課輔志工訓練之研究：以國小四則運算為例(AIT 2013)</td></tr>
-                       <tr><td>應用互動式情境模擬系統於課輔志工訓練之研究：以國小四則運算為例(AIT 2013)(碩士論文)</td></tr>
-                       <tr>
-                           <td align="center" rowspan="3">家瑋</td>
-                           <td>應用情緒管理遊戲於國中生自傷預防教育之評量：以個人化認知偏誤為例(NCS 2013)</td>
-                       </tr>
-                       <tr><td>互動遊戲式評量應用於情緒管理之研究(TWELF 2012)</td></tr>
-                       <tr><td>互動遊戲式評量應用於情緒管理之研究(TWELF 2012)(碩士論文)</td></tr>
-                   </table>
+                    <table border="2" width="800" align="center" class="table_font_size">
+                        <tr>
+                            <td width="10%" align="center" rowspan="8">一般生</td>
+                            <td width="10%" align="center" rowspan="2">育銘</td>
+                            <td width="80%">虛擬教具資源庫之研製－應用於國小數學志工課輔(TWELF 2013)</td>
+                        </tr>
+                        <tr><td>虛擬教具資源庫之研製－應用於國小數學志工課輔(TWELF 2013)(碩士論文)</td></tr>
+                        <tr>
+                            <td align="center" rowspan="3">蟬薇</td>
+                            <td>應用互動式情境模擬系統於課輔志工訓練之研究：以國小三年級數學減法為例(NCS 2013)</td>
+                        </tr>
+                        <tr><td>應用互動式情境模擬系統於課輔志工訓練之研究：以國小四則運算為例(AIT 2013)</td></tr>
+                        <tr><td>應用互動式情境模擬系統於課輔志工訓練之研究：以國小四則運算為例(AIT 2013)(碩士論文)</td></tr>
+                        <tr>
+                            <td align="center" rowspan="3">家瑋</td>
+                            <td>應用情緒管理遊戲於國中生自傷預防教育之評量：以個人化認知偏誤為例(NCS 2013)</td>
+                        </tr>
+                        <tr><td>互動遊戲式評量應用於情緒管理之研究(TWELF 2012)</td></tr>
+                        <tr><td>互動遊戲式評量應用於情緒管理之研究(TWELF 2012)(碩士論文)</td></tr>
+                    </table>
                 </div>
                 <div id="5" class="tab-pane fade">
                     <table border="2" width="800" align="center" class="table_font_size">
@@ -220,7 +229,7 @@
         </div>
         <div class="col-sm-2 sidenav"></div>
     </div>
-    </div>
+</div>
 </div>
 <footer class="container-fluid text-center">
     <p>105021056 @ live.asia.edu.tw</p>

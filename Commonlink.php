@@ -1,3 +1,12 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: warren
+ * Date: 2017/12/3
+ * Time: 下午 11:00
+ */
+include ("funtion.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,16 +65,17 @@
             <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="resune.html">簡歷</a></li>
-                <li><a href="Academic%20service.html">學術服務</a></li>
-                <li><a href="Administrative%20services.html">行政服務</a></li>
-                <li><a href="Academic%20Works.html">學術著作</a></li>
-                <li><a href="Execute.html">執行計畫</a></li>
-                <li><a href="Postgraduate.html">指導研究生</a></li>
-                <li class="active"><a href="Commonlink.html">常用連結</a></li>
-            </ul>
+            <?php varbar(8)?>
+<!--            <ul class="nav navbar-nav">-->
+<!--                <li><a href="index.html">首頁</a></li>-->
+<!--                <li><a href="resune.html">簡歷</a></li>-->
+<!--                <li><a href="Academic%20service.html">學術服務</a></li>-->
+<!--                <li><a href="Administrative%20services.html">行政服務</a></li>-->
+<!--                <li><a href="Academic%20Works.html">學術著作</a></li>-->
+<!--                <li><a href="Execute.html">執行計畫</a></li>-->
+<!--                <li><a href="Postgraduate.html">指導研究生</a></li>-->
+<!--                <li class="active"><a href="Commonlink.html">常用連結</a></li>-->
+<!--            </ul>-->
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
