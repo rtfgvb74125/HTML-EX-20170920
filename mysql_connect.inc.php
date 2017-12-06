@@ -5,9 +5,17 @@
  * Date: 2017/11/22
  * Time: 上午 11:54
  */
-$link = mysqli_connect('localhost','105021056','#5nZBnQx6','105021056');
-if(!$link){
-    die('Could not connect: ' . mysqli_error());
+$db_server = "localhost";
+$db_name = "105021056";
+$db_user = "105021056";
+$db_passwd = "#5nZBnQx6";
+
+$connect= mysqli_connect($db_server,$db_user,$db_passwd,$db_name);
+
+if(!$connect) {
+    die("Error:can not connect with data base");
 }
-echo 'Connected sucessfully';
-mysqli_close($link);?>
+$connect->set_charset("utf8");
+//mysqli_query("SET NAMES utf8");
+
+?>
