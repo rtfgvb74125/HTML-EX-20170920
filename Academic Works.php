@@ -6,6 +6,7 @@
  * Time: 下午 10:58
  */
 include ("funtion.php");
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -84,7 +85,13 @@ include ("funtion.php");
 <!--                <li><a href="Commonlink.html">常用連結</a></li>-->
 <!--            </ul>-->
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                if(isset($_SESSION['username'])){
+                    echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+                }else {
+                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
@@ -100,6 +107,9 @@ include ("funtion.php");
             <li><a href="#yellow" data-toggle="tab">C. 研討會論文(Conference Papers)</a></li>
             <li><a href="#green" data-toggle="tab">D. 中文期刊論文(Chinese Journal Papers)</a></li>
             <li><a href="#blue" data-toggle="tab">E. 國內研討會論文(Conference Papers)</a></li>
+            <li><a href="#set" data-toggle="tab">SetWork</a></li>
+
+
         </ul>
         <div id="my-tab-content" class="tab-content">
             <div class="tab-pane active" id="red">

@@ -6,6 +6,7 @@
  * Time: 下午 11:04
  */
 include ("funtion.php");
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -86,7 +87,13 @@ include ("funtion.php");
 <!--                <li><a href="Commonlink.html">常用連結</a></li>-->
 <!--            </ul>-->
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                if(isset($_SESSION['username'])){
+                    echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+                }else {
+                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>

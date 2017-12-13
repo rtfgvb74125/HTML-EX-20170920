@@ -6,6 +6,7 @@
  * Time: 上午 10:55
  */
 include("funtion.php");
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -94,7 +95,13 @@ include("funtion.php");
         <div class="collapse navbar-collapse" id="myNavbar">
            <?php varbar(2) ;?>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                if(isset($_SESSION['username'])){
+                    echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+                }else {
+                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>

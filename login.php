@@ -20,12 +20,13 @@ if($email != null && $passwd != null&& $row[0]==$email && $row[2]==$passwd)
 {
     $_SESSION['username'] = $email;
     echo 'success';
-    echo '<meta http-equiv=REFRESH CONTENT=1;url=logout.php>';
+    echo 'Logining.......';
+    echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 
 }else{
     echo 'fail';
     echo $email.$passwd;
-    echo '<meta http-equiv=REFRESH CONTENT=1;url=login.php>';
+    echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 }
 ?>
 
