@@ -43,7 +43,7 @@ session_start();
 
             /* Set black background color, white text and some padding */
             footer {
-                background-color: #3995ff;
+                background-color: #020409;
                 color: #ff6f32;
                 padding: 15px;
                 font-size: 2em;
@@ -107,7 +107,12 @@ session_start();
             <li><a href="#yellow" data-toggle="tab">C. 研討會論文(Conference Papers)</a></li>
             <li><a href="#green" data-toggle="tab">D. 中文期刊論文(Chinese Journal Papers)</a></li>
             <li><a href="#blue" data-toggle="tab">E. 國內研討會論文(Conference Papers)</a></li>
-            <li><a href="#set" data-toggle="tab">SetWork</a></li>
+            <?php
+            if(isset($_SESSION['username'])){
+                echo '<li><a href="#set" data-toggle="tab">SetWork</a></li>';
+            }
+            ?>
+
 
 
         </ul>
@@ -209,6 +214,26 @@ session_start();
                 <p>[22]  時碧英、時文中, (2009), “應用物件導向學習環境與教材進行國小修辭教學之研究,” 物件導向技術及應用研討會(OOTA 2009), Nov. 20, 2009, Taichung, Taiwan. (NSC 97-2511-S-468-003- )</p>
                 <p>[23]  時美梅、時文中, (2009), “使用維基提示法加強國小學童寫作能力之研究,” 資訊教育與科技應用研討會(IETAC 2009), Nov. 6, 2009, Taichung, Taiwan. (NSC 97-2511-S-468-003- )</p>
                 <p>[24]  張耀鴻、高千喻、時文中, (2009), “以Web2.0的概念建置數學教學法知識庫,” 資訊教育與科技應用研討會(IETAC 2009), Nov. 6, 2009, Taichung, Taiwan. (NSC 97-2511-S-468-003- )</p>
+            </div>
+            <div class="tab-pane" id="set">
+                <h1>設定</h1>
+                <form action="add.php" method="post">
+                    作者:<input type="text" name="actur"><br>
+                    書名:<input type="text" name="book"><br>
+                    出版社:<input type="text" name="publish"><br>
+                    頁碼:<input type="text" name="page"><br>
+                    日期:<input type="text" name="date"><br>
+                    種類:<select type = "text" name="type">
+                        <option value="0">期刊論文</option>
+                        <option value="1">國際研討會與專書論文</option>
+                        <option value="2">研討會論文</option>
+                        <option value="3">中文期刊</option>
+                        <option value="4">國內研討會論文</option>
+                    </select>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
             </div>
         </div>
     </div>

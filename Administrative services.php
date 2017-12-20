@@ -37,7 +37,7 @@ session_start();
 
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #3995ff;
+            background-color: #020409;
             color: #ff6f32;
             padding: 15px;
             font-size: 2em;

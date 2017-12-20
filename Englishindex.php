@@ -74,12 +74,12 @@ session_start();
             <ul class="nav navbar-nav">
                 <li class="active"><a href="Englishindex.php">Home</a></li>
                 <li ><a href="resune.php">Resume</a></li>
-                <li><a href="Academic%20service.html">Academic service</a></li>
-                <li><a href="Administrative%20services.html">Administrative services</a></li>
-                <li><a href="Academic%20Works.html">Academic Works</a></li>
-                <li><a href="Execute.html">Execute plan</a></li>
-                <li><a href="Postgraduate.html">Postgraduate</a></li>
-                <li><a href="Commonlink.html">Common links</a></li>
+                <li><a href="Academic%20service.php">Academic service</a></li>
+                <li><a href="Administrative%20services.php">Administrative services</a></li>
+                <li><a href="Academic%20Works.php">Academic Works</a></li>
+                <li><a href="Execute.php">Execute plan</a></li>
+                <li><a href="Postgraduate.php">Postgraduate</a></li>
+                <li><a href="Commonlink.php">Common links</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
