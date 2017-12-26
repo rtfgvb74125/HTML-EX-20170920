@@ -16,4 +16,11 @@ $type = $_POST['type'];
 $add = "INSERT INTO publish(`actur`,`book`,`publish`,`page`,`date`,`type`)VALUE ($actur , $book , $publish , $page , $date , $type);";
 
 echo $add;
-//if($res)
+if($result = $mysqli->query($add)){
+    echo "新增成功";
+    echo "<mata http-equiv=REFRESH CONTENT=1; url=index.php>";
+}else{
+    echo "新增失敗";
+    echo "<mata http-equiv=REFRESH CONTENT=1; url=index.php>";
+
+}
