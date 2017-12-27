@@ -217,7 +217,7 @@ session_start();
             </div>
             <div class="tab-pane" id="set">
                 <h1>設定</h1>
-                <form action="add.php" method="post">
+                <form action="addsql.php" method="post">
                     作者:<input type="text" name="actur"><br>
                     書名:<input type="text" name="book"><br>
                     出版社:<input type="text" name="publish"><br>

@@ -42,6 +42,8 @@ $RECYCLE.BIN/
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
+mailTest.php
+mysql_connect.php
 Network Trash Folder
 Temporary Items
 .apdisk

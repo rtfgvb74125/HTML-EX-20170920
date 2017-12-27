@@ -19,8 +19,10 @@ $row = mysqli_fetch_row($result);
 if($email != null && $passwd != null&& $row[0]==$email && $row[2]==$passwd)
 {
     $_SESSION['username'] = $email;
+    require_once ('mailTest.php');
     echo 'success';
     echo 'Logining.......';
+
     echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 
 }else{

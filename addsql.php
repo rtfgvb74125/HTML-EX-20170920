@@ -13,14 +13,14 @@ $publish = $_POST['publish'];
 $page = $_POST['page'];
 $date = $_POST['date'];
 $type = $_POST['type'];
-$add = "INSERT INTO publish(`actur`,`book`,`publish`,`page`,`date`,`type`)VALUE ($actur , $book , $publish , $page , $date , $type);";
+$addsql = "INSERT INTO Teacherwork(`autter`,`title`,`publisher`,`page`,`date`,`type`)VALUE ('$actur','$book','$publish','$page','$date','$type');";
 
-echo $add;
-if($result = $mysqli->query($add)){
+echo $addsql;
+if($result = $connect->query($addsql)){
     echo "新增成功";
-    echo "<mata http-equiv=REFRESH CONTENT=1; url=index.php>";
+    echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 }else{
     echo "新增失敗";
-    echo "<mata http-equiv=REFRESH CONTENT=1; url=index.php>";
+//    echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 
 }
