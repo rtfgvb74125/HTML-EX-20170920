@@ -43,7 +43,7 @@ $RECYCLE.BIN/
 .AppleDB
 .AppleDesktop
 mailTest.php
-mysql_connect.php
+mysql_connect.inc.php
 Network Trash Folder
 Temporary Items
 .apdisk
