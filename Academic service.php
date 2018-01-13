@@ -6,7 +6,8 @@
  * Time: 下午 10:57
  */
 session_start();
-include ("funtion.php")
+include ('mysql_connect.inc.php');
+include ("funtion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,16 @@ include ("funtion.php")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Cardo:400italic' rel='stylesheet' type='text/css'><script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-53855.js"></script>
     <style>
+        .content{
+            font-family: "wcl-07";
+            font-weight: 700;
+        }
+        li{
+            font-family: "wcl-07";
+            font-weight: 700;
+        }
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
             margin-bottom: 0;
@@ -37,10 +47,12 @@ include ("funtion.php")
 
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #3995ff;
+            background-color: #050c15;
             color: #ff6f32;
             padding: 15px;
             font-size: 2em;
+            font-family: "wcl-07";
+            font-weight: 700;
         }
 
         /* On small screens, set height to 'auto' for sidenav and grid */
@@ -63,7 +75,13 @@ include ("funtion.php")
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
+            <?php
+            if(isset($_SESSION['username'])){
+            echo '<a class="navbar-brand" href=#>控制台</a>';
+            }else{
+            echo '<a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="Image/csie.png" width="30"height="30" border="0"></a>';
+            }
+            ?>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <?php varbar(3)?>
@@ -100,7 +118,7 @@ include ("funtion.php")
         <div class="col-sm-8 text-left">
             <h1 style="color: #b051cc">學術服務</h1>
             <hr>
-            <div class="container">
+
 
                 <!-------->
                 <div id="content">
@@ -110,54 +128,165 @@ include ("funtion.php")
                         <li><a href="#yellow" data-toggle="tab">3.研討會委員</a></li>
                         <li><a href="#green" data-toggle="tab">4.研討會議程主持人</a></li>
                         <li><a href="#blue" data-toggle="tab">5.外校碩士論文口試委員</a></li>
+                        <?php
+                        if(isset($_SESSION['username'])){
+                            echo ' <li><a href="#set" data-toggle="tab">Set</a></li>';
+                        }
+                        ?>
                     </ul>
+
                     <div id="my-tab-content" class="tab-content">
                         <div class="tab-pane active" id="red">
-                            <ul>
-                                <li><span style="font-size: 2em;color: #3845ff">(1) ISRN Education: 2011-2013</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(2) International Journal of the Academy of Organizational Behavior Management (IJAOBM): 2012-2014</span></li>
-                            </ul>
+                            <table width="800" class="table-set ;table table-responsiv-sm" border="1" style="font-size: 1.5em;color: #0000FF">
+                                <?php
+                                $query = "SELECT * FROM `Academic` WHERE `type`='0' ";
+                                if($result = $connect->query($query)){
+                                    while ($row = $result->fetch_row()){
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo '<tr>';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
+                                        echo '<td>'.$row[1].'</td>';
+                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                        }
+                                        echo '</tr>';
+                                        echo "</form>";
+                                    }
+                                }
+                                ?>
+                            </table>
                         </div>
                         <div class="tab-pane" id="orange">
-                            <ul>
-                                <li><span style="font-size: 2em;color: #3845ff">(1) Computers & Education: 2008, 2009, 2010, 2011</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(2) Turkish Online Journal of Educational Technology, 2011</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(3) IEEE’s Transactions on Learning Technologies: 2010, 2013</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(4) International Journal of Computers and Applications: 2010, 2011</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(5) Journal of Computing in Higher Education: 2009, 2010</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(6) Journal of Computer Systems, Networks, and Communications: 2010</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(7) Journal of Supercomputing: 2010, 2013</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(8) Journal of Information Science and Engineering: 2009</span></li>
-                            </ul>
+                            <table width="800" class="table-set ;table table-responsiv-sm" border="1" style="font-size: 1.5em;color: #0000FF">
+                                <?php
+                                $query = "SELECT * FROM `Academic` WHERE `type`='1' ";
+                                if($result = $connect->query($query)){
+                                    while ($row = $result->fetch_row()){
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo '<tr>';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
+                                        echo '<td>'.$row[1].'</td>';
+                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                        }
+                                        echo '</tr>';
+                                        echo "</form>";
+                                    }
+                                }
+                                ?>
+                            </table>
                         </div>
                         <div class="tab-pane" id="yellow">
-                            <ul>
-                                <li><span style="font-size: 2em;color: #3845ff">(1) Program Committee: The 9th IFIP International Conference on Network and Parallel Computing (NPC 2012)</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(2) Finance Co-Chair: IEEE International Symposium on Multimedia (ISM2010)</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(3) 議程委員：第六屆台灣數位學習發展研討會(Taiwan E-Learning Forum, TWELF2010)</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(4) 議程副主席：2013全國計算機會議(2013 National Computer Symposium, NCS 2013)</span></li>
-                            </ul>
+                            <table width="800" class="table-set ;table table-responsiv-sm" border="1" style="font-size: 1.5em;color: #0000FF">
+                                <?php
+                                $query = "SELECT * FROM `Academic` WHERE `type`='2' ";
+                                if($result = $connect->query($query)){
+                                    while ($row = $result->fetch_row()){
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo '<tr>';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
+                                        echo '<td>'.$row[1].'</td>';
+                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                        }
+                                        echo '</tr>';
+                                        echo "</form>";
+                                    }
+                                }
+                                ?>
+                            </table>
                         </div>
-                        <div class="tab-pane" id="green">
-                            <ul>
-                                <li><span style="font-size: 2em;color: #3845ff">(1) 共同主持人：第六屆台灣數位學習發展研討會(Taiwan E-Learning Forum, TWELF2010)
-     Session C: 適性化學習與電腦化測驗與評量(一)</span></li>
-                            </ul>
+                        <div  class="tab-pane" id="green">
+                            <table width="800" class="table-set ;table table-responsiv-sm" border="1" style="font-size: 1.5em;color: #0000FF">
+                                <?php
+                                $query = "SELECT * FROM `Academic` WHERE `type`='3' ";
+                                if($result = $connect->query($query)){
+                                    while ($row = $result->fetch_row()){
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo '<tr>';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
+                                        echo '<td>'.$row[1].'</td>';
+                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                        }
+                                        echo '</tr>';
+                                        echo "</form>";
+                                    }
+                                }
+                                ?>
+                            </table>
                         </div>
                         <div class="tab-pane" id="blue">
-                            <ul>
-                                <li><span style="font-size: 2em;color: #3845ff">(1) 東海大學: 2009, 2010, 2011, 2012</span></li>
-                                <li><span style="font-size: 2em;color: #3845ff">(2) 彰師大: 2009</span></li>
-                            </ul>
+                            <table width="800" class="table-set ;table table-responsiv-sm" border="1" style="font-size: 1.5em;color: #0000FF">
+                                <?php
+                                $query = "SELECT * FROM `Academic` WHERE `type`='4' ";
+                                if($result = $connect->query($query)){
+                                    while ($row = $result->fetch_row()){
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo '<tr>';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
+                                        echo '<td>'.$row[1].'</td>';
+                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                        }
+                                        echo '</tr>';
+                                        echo "</form>";
+                                    }
+                                }
+                                ?>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id = "set">
+                            <form action="Academicadd.php" method="post">
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" >標題 : </label>
+                                    <div class="col-md-4">
+                                        <input  name="title" type="text" placeholder="標題" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" >日期 : </label>
+                                    <div class="col-md-4">
+                                        <input  name="date" type="text" placeholder="日期" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="store">種類</label>
+                                    <div class="col-md-4">
+                                        <select  name="type" class="form-control">
+                                            <option value="0">國際期刊 編輯委員</option>
+                                            <option value="1">國際期刊 論文審查</option>
+                                            <option value="2">研討會委員</option>
+                                            <option value="3">研討會義程主持人</option>
+                                            <option value="4">外校碩士論文口試委員</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-success">提交</button>
+
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
+
 
         </div>
     </div>
+</div>
     <footer class="container-fluid text-center">
-        <p>105021056 @ live.asia.edu.tw</p>
+        <p>Asia University Power by JiaEn</p>
     </footer>
 
 

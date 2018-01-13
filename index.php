@@ -7,6 +7,7 @@
  */
 session_start();
 include("funtion.php");
+include ("mysql_connect.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,16 @@ include("funtion.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Cardo:400italic' rel='stylesheet' type='text/css'><script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-53855.js"></script>
     <style>
+        .content{
+            font-family: "wcl-07";
+            font-weight: 700;
+        }
+        li{
+            font-family: "wcl-07";
+            font-weight: 700;
+        }
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
             margin-bottom: 0;
@@ -37,10 +47,12 @@ include("funtion.php");
 
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #3995ff;
+            background-color: #050c15;
             color: #ff6f32;
             padding: 15px;
             font-size: 2em;
+            font-family: "wcl-07";
+            font-weight: 700;
         }
 
         /* On small screens, set height to 'auto' for sidenav and grid */
@@ -63,7 +75,14 @@ include("funtion.php");
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
+            <?php
+            if(isset($_SESSION['username'])){
+                echo '<a class="navbar-brand" href=#>控制台</a>';
+            }else{
+                echo '<a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="Image/csie.png" width="30"height="30" border="0"></a>';
+            }
+            ?>
+
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <?php varbar(1); ?>
@@ -101,15 +120,178 @@ include("funtion.php");
             <h1>時文中</h1>
             <hr>
             <h3>簡介</h3>
-            <p>現職：亞洲大學 資訊工程學系 副教授</p>
-            <p>兼任：亞洲大學資工系系主任</p>
-            <p>學歷：交通大學 資訊科學與工程研究所 博士</p>
-            <p>研究領域：數位學習科技</p>
-            <p>研究專長：知識工程、雲端運算</p>
-            <p>Email：wjshih@asia.edu.tw or wjshih1@gmail.com </p>
-            <p>研究室：HB39</p>
-            <p>電話：04-23323456 分機：20039</p>
-            <p>實驗室：<a href="http://kdelab.aim.asia.edu.tw/">知識與資料工程實驗室I434B</a></p>
+            <?php
+            $query = "SELECT * FROM `Introduction` ";
+            if($result = $connect->query($query)) {
+                while ($row = $result->fetch_row()) {
+            ?>
+            <?php
+            if(isset($_SESSION['username'])){
+                ?>
+                <h4>設定</h4>
+
+                <form action="Reset.php" method = "post" >
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >現職 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="position" type="text" placeholder= "現職"class="form-control input-md" value="'.$row[0].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >兼任 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo ' <input  name="part" type="text" placeholder= "兼任"class="form-control input-md" value="'.$row[1].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >學歷 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="education" type="text" placeholder= "現職"class="form-control input-md" value="'.$row[2].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >研究領域 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="areas" type="text" placeholder= "研究領域"class="form-control input-md" value="'.$row[3].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >研究專長 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="expertise" type="text" placeholder= "研究專長"class="form-control input-md" value="'.$row[4].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >E-mail : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="email" type="text" placeholder= "email"class="form-control input-md" value="'.$row[5].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >研究室 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="room" type="text" placeholder= "研究室"class="form-control input-md" value="'.$row[6].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >電話 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="phone" type="text" placeholder= "電話"class="form-control input-md" value="'.$row[7].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >分機 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="ext" type="text" placeholder= "分機"class="form-control input-md" value="'.$row[8].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" >實驗室 : </label>
+                        <div class="col-md-4">
+                            <?php
+                            echo '<input  name="laboratory" type="text" placeholder= "實驗室"class="form-control input-md" value="'.$row[9].'">'
+                            ?>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success">修改</button>
+                </form>
+
+
+                <?php
+            }else{
+                ?>
+
+<!---->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-2 control-label" >E-mail : </label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input  name="email" type="text" placeholder= "E-mail"class="form-control input-md">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-2 control-label" >研究室 : </label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input  name="room" type="text" placeholder= "研究室"class="form-control input-md">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-2 control-label" >電話 : </label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input  name="phone" type="text" placeholder= "電話"class="form-control input-md">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-2 control-label" >分機 : </label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input  name="ext" type="text" placeholder= "分機"class="form-control input-md">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="form-group">-->
+<!--                    <label class="col-md-2 control-label" >實驗室 : </label>-->
+<!--                    <div class="col-md-4">-->
+<!--                        <input  name="laboratory" type="text" placeholder= "實驗室"class="form-control input-md">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <br>-->
+<!--                <button type="submit" class="btn btn-success">修改</button>-->
+<!--            </form>-->
+
+            <?php
+                    echo '<span style="font-size: larger">'.'現職 : ' . $row[0].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'兼任 : '.$row[1].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'學歷 : '.$row[2].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'研究領域 : '.$row[3].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'研究專長 : '.$row[4].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'E-mail : '.$row[5].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'研究室 : '.$row[6].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'電話 : '.$row[7].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'分機 : '.$row[8].'</span>';
+                    echo '<br>';
+                    echo '<span style="font-size: larger">'.'實驗室 : '.'<a href = "http://kdelab.aim.asia.edu.tw/">'.$row[9].'</a>'.'</span>';
+
+                }
+            }
+            }
+            ?>
+<!--            <p>現職：亞洲大學 資訊工程學系 副教授</p>-->
+<!--            <p>兼任：亞洲大學資工系系主任</p>-->
+<!--            <p>學歷：交通大學 資訊科學與工程研究所 博士</p>-->
+<!--            <p>研究領域：數位學習科技</p>-->
+<!--            <p>研究專長：知識工程、雲端運算</p>-->
+<!--            <p>Email：wjshih@asia.edu.tw or wjshih1@gmail.com </p>-->
+<!--            <p>研究室：HB39</p>-->
+<!--            <p>電話：04-23323456 分機：20039</p>-->
+<!--            <p>實驗室：<a href="http://kdelab.aim.asia.edu.tw/">知識與資料工程實驗室I434B</a></p>-->
         </div>
         <div class="col-sm-2 sidenav">
 
@@ -120,7 +302,7 @@ include("funtion.php");
     </div>
 </div>
 <footer class="container-fluid text-center">
-    <p>105021056 @ live.asia.edu.tw</p>
+    <p>Asia University Power by JiaEn</p>
 </footer>
 
 

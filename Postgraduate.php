@@ -36,7 +36,7 @@
 
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #3995ff;
+            background-color: #050c15;
             color: #ff6f32;
             padding: 15px;
             font-size: 2em;
@@ -64,8 +64,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
-        </div>
+            <?php
+            if(isset($_SESSION['username'])){
+            echo '<a class="navbar-brand" href=#>控制台</a>';
+            }else{
+            echo '<a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="Image/csie.png" width="30"height="30" border="0"></a>';
+            }
+            ?>        </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <?php varbar(7)?>
 <!--            <ul class="nav navbar-nav">-->
@@ -113,7 +118,7 @@
 
             <div class="tab-content">
                 <div id="1" class="tab-pane fade in active">
-                    <table border="2" width="800" align="center" class="table_font_size">
+                    <table border="2" width="800" align="center" class="table_font_size; table table-responsiv-sm">
                         <tr>
                             <td width="10%" align="center" rowspan="10">資工在職專班</td>
                             <td width="10%" rowspan="2" align="center">耀鴻</td>
@@ -153,7 +158,7 @@
                     </table>
                 </div>
                 <div id="2" class="tab-pane fade">
-                    <table border="2" width="800" align="center" class="table_font_size">
+                    <table border="2" width="800" align="center" class="table_font_size ; table table-responsiv-sm">
                         <tr>
                             <td width="10%" rowspan="2">一般生</td>
                             <td width="10%" rowspan="2">聰智</td>
@@ -173,7 +178,7 @@
                     </table>
                 </div>
                 <div id="3" class="tab-pane fade">
-                    <table border="2" width="800" align="center" class="table_font_size">
+                    <table border="2" width="800" align="center" class="table_font_size ; table table-responsiv-sm">
                         <tr>
                             <td width="10%" align="center" rowspan="7">一般生</td>
                             <td width="10%" align="center" rowspan="2">青瑜</td>
@@ -200,7 +205,7 @@
                     </table>
                 </div>
                 <div id="4" class="tab-pane fade">
-                    <table border="2" width="800" align="center" class="table_font_size">
+                    <table border="2" width="800" align="center" class="table_font_size ; table table-responsiv-sm">
                         <tr>
                             <td width="10%" align="center" rowspan="8">一般生</td>
                             <td width="10%" align="center" rowspan="2">育銘</td>
@@ -222,7 +227,7 @@
                     </table>
                 </div>
                 <div id="5" class="tab-pane fade">
-                    <table border="2" width="800" align="center" class="table_font_size">
+                    <table border="2" width="800" align="center" class="table_font_size ; table table-responsiv-sm">
                         <tr>
                             <td width="10%" align="center" rowspan="3">一般生</td>
                             <td width="10%" align="center" rowspan="3">承儒</td>

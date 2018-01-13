@@ -22,7 +22,16 @@ session_start();
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='//fonts.googleapis.com/css?family=Cardo:400italic' rel='stylesheet' type='text/css'><script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-53855.js"></script>
         <style>
+            .content{
+                font-family: "wcl-07";
+                font-weight: 700;
+            }
+            li{
+                font-family: "wcl-07";
+                font-weight: 700;
+            }
             /* Remove the navbar's default margin-bottom and rounded borders */
             .navbar {
                 margin-bottom: 0;
@@ -41,10 +50,12 @@ session_start();
 
             /* Set black background color, white text and some padding */
             footer {
-                background-color: #3995ff;
+                background-color: #050c15;
                 color: #ff6f32;
                 padding: 15px;
                 font-size: 2em;
+                font-family: "wcl-07";
+                font-weight: 700;
             }
 
             /* On small screens, set height to 'auto' for sidenav and grid */
@@ -67,8 +78,13 @@ session_start();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
-        </div>
+            <?php
+            if(isset($_SESSION['username'])){
+            echo '<a class="navbar-brand" href=#>控制台</a>';
+            }else{
+            echo '<a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="Image/csie.png" width="30"height="30" border="0"></a>';
+            }
+            ?>        </div>
         <div class="collapse navbar-collapse" id="myNavbar">
 
             <ul class="nav navbar-nav">

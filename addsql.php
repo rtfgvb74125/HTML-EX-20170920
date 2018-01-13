@@ -18,7 +18,7 @@ $addsql = "INSERT INTO Teacherwork(`autter`,`title`,`publisher`,`page`,`date`,`t
 echo $addsql;
 if($result = $connect->query($addsql)){
     echo "新增成功";
-    echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
+    echo '<meta http-equiv=REFRESH CONTENT=1;url=Academic%20Works.php>';
 }else{
     echo "新增失敗";
 //    echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';

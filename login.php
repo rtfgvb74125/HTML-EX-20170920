@@ -19,7 +19,7 @@ $row = mysqli_fetch_row($result);
 if($email != null && $passwd != null&& $row[0]==$email && $row[2]==$passwd)
 {
     $_SESSION['username'] = $email;
-    require_once ('mailTest.php');
+//    require_once ('mailTest.php');
     echo 'success';
     echo 'Logining.......';
 

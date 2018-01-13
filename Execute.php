@@ -23,7 +23,16 @@ session_start();
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='//fonts.googleapis.com/css?family=Cardo:400italic' rel='stylesheet' type='text/css'><script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-53855.js"></script>
         <style>
+            .content{
+                font-family: "wcl-07";
+                font-weight: 700;
+            }
+            li{
+                font-family: "wcl-07";
+                font-weight: 700;
+            }
             /* Remove the navbar's default margin-bottom and rounded borders */
             .navbar {
                 margin-bottom: 0;
@@ -42,10 +51,12 @@ session_start();
 
             /* Set black background color, white text and some padding */
             footer {
-                background-color: #3995ff;
+                background-color: #050c15;
                 color: #ff6f32;
                 padding: 15px;
                 font-size: 2em;
+                font-family: "wcl-07";
+                font-weight: 700;
             }
 
             /* On small screens, set height to 'auto' for sidenav and grid */
@@ -71,8 +82,13 @@ session_start();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="http://csie.asia.edu.tw/csie.png" width="30"height="30" border="0"></a>
-
+            <?php
+            if(isset($_SESSION['username'])){
+            echo '<a class="navbar-brand" href=#>控制台</a>';
+            }else{
+            echo '<a class="navbar-brand" href="http://csie.asia.edu.tw/"><img src="Image/csie.png" width="30"height="30" border="0"></a>';
+            }
+            ?>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <?php varbar(6)?>
@@ -115,7 +131,7 @@ session_start();
             <div class="tab-content col-md-10">
                 <div class="tab-pane active" id="tab_a">
                     <h4>科技部計畫(主持人)</h4>
-                    <table class="table-set" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
                         <tr bgcolor="aqua">
                             <th width="10%" >計畫年度</th>
                             <th width="10%">主持人</th>
@@ -230,7 +246,7 @@ session_start();
                 </div>
                 <div class="tab-pane" id="tab_b">
                     <h4>國科會大專學生研究計畫(指導教授)</h4>
-                    <table class="table-set" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
                         <tr bgcolor="aqua">
                             <th width="10%" >計畫年度</th>
                             <th width="10%">職務</th>
@@ -282,7 +298,7 @@ session_start();
                 </div>
                 <div class="tab-pane" id="tab_c">
                     <h4>國科會計畫(共同主持人)</h4>
-                    <table class="table-set" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
                         <tr bgcolor="aqua">
                             <th width="10%">計畫年度</th>
                             <th width="10%">職務</th>
@@ -335,7 +351,7 @@ session_start();
                 </div>
                 <div class="tab-pane" id="tab_d">
                     <h4>產學合作計畫</h4>
-                    <table class="table-set" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
                         <tr bgcolor="aqua">
                             <th>計畫年度</th>
                             <th>職務</th>
