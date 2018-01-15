@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f698f1-f4a4-4f74-aa29-36576c2280e1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AdminDelet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Adminadd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ExcuteDelet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Excuteadd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PostDelet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Postadd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resuneDelet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resuneadd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Academic Works.php" afterPath="$PROJECT_DIR$/Academic Works.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Academic service.php" afterPath="$PROJECT_DIR$/Academic service.php" />
@@ -10,11 +18,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Englishindex.php" afterPath="$PROJECT_DIR$/Englishindex.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Execute.php" afterPath="$PROJECT_DIR$/Execute.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Postgraduate.php" afterPath="$PROJECT_DIR$/Postgraduate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addsql.php" afterPath="$PROJECT_DIR$/addsql.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funtion.php" afterPath="$PROJECT_DIR$/funtion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mailTest.php" afterPath="$PROJECT_DIR$/mailTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resune.php" afterPath="$PROJECT_DIR$/resune.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,17 +31,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Academic Works.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Academic Works.php">
+      <file leaf-file-name="Academic service.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Academic service.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1225">
-              <caret line="211" column="35" lean-forward="false" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="35" />
+            <state relative-caret-position="185">
+              <caret line="279" column="89" lean-forward="false" selection-start-line="278" selection-start-column="32" selection-end-line="279" selection-end-column="89" />
               <folding>
-                <marker date="1515833774000" expanded="true" signature="5394:5438" ph="SELECT * FRO... Teacherwork" />
-                <marker date="1515833774000" expanded="true" signature="6030:6074" ph="SELECT * FRO... Teacherwork" />
-                <marker date="1515833774000" expanded="true" signature="6680:6724" ph="SELECT * FRO... Teacherwork" />
-                <marker date="1515833774000" expanded="true" signature="7351:7395" ph="SELECT * FRO... Teacherwork" />
-                <marker date="1515833774000" expanded="true" signature="8001:8045" ph="SELECT * FRO... Teacherwork" />
+                <marker date="1515944366810" expanded="true" signature="5693:5734" ph="SELECT * FRO... Academic" />
+                <marker date="1515944366810" expanded="true" signature="7081:7122" ph="SELECT * FRO... Academic" />
+                <marker date="1515944366810" expanded="true" signature="8469:8510" ph="SELECT * FRO... Academic" />
+                <marker date="1515944366810" expanded="true" signature="9857:9898" ph="SELECT * FRO... Academic" />
+                <marker date="1515944366810" expanded="true" signature="11243:11284" ph="SELECT * FRO... Academic" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Postgraduate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Postgraduate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="157" column="59" lean-forward="false" selection-start-line="157" selection-start-column="59" selection-end-line="157" selection-end-column="59" />
+              <folding>
+                <marker date="1515990577805" expanded="true" signature="4970:4993" ph="SELECT * FRO... Project" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Postadd.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Postadd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <marker date="1515990612230" expanded="true" signature="309:440" ph="INSERT INTO Student... " />
               </folding>
             </state>
           </provider>
@@ -65,13 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/interest.html" />
-        <option value="$PROJECT_DIR$/longweb.html" />
-        <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/teacher.index/teachindex.html" />
-        <option value="$PROJECT_DIR$/teacher.index/css/style.css" />
         <option value="$PROJECT_DIR$/teacher.index/css/list.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/teacher.index/Academic service.html" />
@@ -94,26 +116,35 @@
         <option value="$PROJECT_DIR$/teacher.index/resune.php" />
         <option value="$PROJECT_DIR$/teacher.index/css/longin.css" />
         <option value="$PROJECT_DIR$/teacher.index/mysql_connect.inc.php" />
-        <option value="$PROJECT_DIR$/funtion.php" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/mysql_connect.inc.php" />
         <option value="$PROJECT_DIR$/indexlogout.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/Academic service.php" />
-        <option value="$PROJECT_DIR$/Commonlink.php" />
-        <option value="$PROJECT_DIR$/resune.php" />
-        <option value="$PROJECT_DIR$/Postgraduate.php" />
-        <option value="$PROJECT_DIR$/Execute.php" />
-        <option value="$PROJECT_DIR$/Englishindex.php" />
-        <option value="$PROJECT_DIR$/Administrative services.php" />
-        <option value="$PROJECT_DIR$/Academic Works.php" />
         <option value="&lt;f31fe2ac-7298-476f-9e4b-399918424a94&gt;/add.php" />
         <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/addsql.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/mailTest.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/funtion.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Englishindex.php" />
+        <option value="$PROJECT_DIR$/Commonlink.php" />
+        <option value="$PROJECT_DIR$/Academic Works.php" />
+        <option value="$PROJECT_DIR$/resuneadd.php" />
+        <option value="$PROJECT_DIR$/resuneDelet.php" />
+        <option value="$PROJECT_DIR$/resune.php" />
+        <option value="$PROJECT_DIR$/Adminadd.php" />
+        <option value="$PROJECT_DIR$/AdminDelet.php" />
+        <option value="$PROJECT_DIR$/Administrative services.php" />
+        <option value="$PROJECT_DIR$/Academic service.php" />
+        <option value="$PROJECT_DIR$/ExcuteDelet.php" />
+        <option value="$PROJECT_DIR$/Excuteadd.php" />
+        <option value="$PROJECT_DIR$/Execute.php" />
+        <option value="$PROJECT_DIR$/PostDelet.php" />
+        <option value="$PROJECT_DIR$/Academicadd.php" />
+        <option value="$PROJECT_DIR$/Postgraduate.php" />
+        <option value="$PROJECT_DIR$/Postadd.php" />
       </list>
     </option>
   </component>
@@ -145,6 +176,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,8 +189,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,7 +263,18 @@
       <workItem from="1514275151609" duration="1311000" />
       <workItem from="1514277064235" duration="350000" />
       <workItem from="1514340321754" duration="6181000" />
-      <workItem from="1515847396031" duration="53000" />
+      <workItem from="1515847396031" duration="781000" />
+      <workItem from="1515848641381" duration="575000" />
+      <workItem from="1515906759112" duration="282000" />
+      <workItem from="1515934220555" duration="1314000" />
+      <workItem from="1515936414520" duration="959000" />
+      <workItem from="1515937443510" duration="1794000" />
+      <workItem from="1515939269064" duration="815000" />
+      <workItem from="1515941303229" duration="1771000" />
+      <workItem from="1515943150527" duration="1263000" />
+      <workItem from="1515985577613" duration="1765000" />
+      <workItem from="1515987369071" duration="1794000" />
+      <workItem from="1515989246077" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="20171227">
       <created>1514346527246</created>
@@ -241,22 +283,28 @@
       <option name="project" value="LOCAL" />
       <updated>1514346527247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="20170113">
+      <created>1515847465083</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515847465083</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76134000" />
+    <option name="totallyTimeSpent" value="90598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1703125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1546875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114528105" sideWeight="0.09166667" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114528105" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114528105" sideWeight="0.90833336" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -281,23 +329,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20171220" />
     <MESSAGE value="20171227" />
-    <option name="LAST_COMMIT_MESSAGE" value="20171227" />
+    <MESSAGE value="20170113" />
+    <option name="LAST_COMMIT_MESSAGE" value="20170113" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/teacher.index/index.html" />
-    <entry file="file://$PROJECT_DIR$/css2/style.css" />
-    <entry file="file://$PROJECT_DIR$/test/index.html" />
-    <entry file="file://$PROJECT_DIR$/teacher.index/index.html" />
-    <entry file="file://$PROJECT_DIR$/css2/style.css" />
-    <entry file="file://$PROJECT_DIR$/test/index.html" />
-    <entry file="file://$PROJECT_DIR$/css2/style.css" />
-    <entry file="file://$PROJECT_DIR$/teacher.index/index.html" />
-    <entry file="file://$PROJECT_DIR$/test/index.html" />
-    <entry file="file://$PROJECT_DIR$/test/interest.html" />
     <entry file="file://$PROJECT_DIR$/test/longweb.html" />
     <entry file="file://$PROJECT_DIR$/test/test.html" />
     <entry file="file://$PROJECT_DIR$/test/interest.html" />
@@ -320,41 +359,234 @@
     <entry file="file://$PROJECT_DIR$/teacher.index/Academic Works.html" />
     <entry file="file://$PROJECT_DIR$/teacher.index/Execute.html" />
     <entry file="file://$PROJECT_DIR$/teacher.index/Postgraduate.html" />
-    <entry file="file://$PROJECT_DIR$/funtion.php" />
     <entry file="file://$PROJECT_DIR$/teacher.index/Commonlink.html" />
     <entry file="file://$PROJECT_DIR$/teacher.index/Administrative services.html" />
     <entry file="file://$PROJECT_DIR$/login.html" />
-    <entry file="file://$PROJECT_DIR$/Academic service.php" />
-    <entry file="file://$PROJECT_DIR$/Commonlink.php" />
-    <entry file="file://$PROJECT_DIR$/resune.php" />
-    <entry file="file://$PROJECT_DIR$/Execute.php" />
     <entry file="file://$PROJECT_DIR$/logout.php" />
-    <entry file="file://$PROJECT_DIR$/Administrative services.php" />
-    <entry file="file://$PROJECT_DIR$/Englishindex.php" />
-    <entry file="file://$PROJECT_DIR$/Postgraduate.php" />
     <entry file="file://$PROJECT_DIR$/mysql_connect.inc.php" />
     <entry file="file://$PROJECT_DIR$/addsql.php" />
-    <entry file="file://$PROJECT_DIR$/index.php" />
     <entry file="file://$PROJECT_DIR$/login.php" />
     <entry file="file://$PROJECT_DIR$/mailTest.php" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Englishindex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commonlink.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funtion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resuneadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Academic Works.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="211" column="35" lean-forward="false" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="35" />
+        <state relative-caret-position="1668">
+          <caret line="282" column="77" lean-forward="false" selection-start-line="282" selection-start-column="20" selection-end-line="282" selection-end-column="77" />
           <folding>
-            <marker date="1515833774000" expanded="true" signature="5394:5438" ph="SELECT * FRO... Teacherwork" />
-            <marker date="1515833774000" expanded="true" signature="6030:6074" ph="SELECT * FRO... Teacherwork" />
-            <marker date="1515833774000" expanded="true" signature="6680:6724" ph="SELECT * FRO... Teacherwork" />
-            <marker date="1515833774000" expanded="true" signature="7351:7395" ph="SELECT * FRO... Teacherwork" />
-            <marker date="1515833774000" expanded="true" signature="8001:8045" ph="SELECT * FRO... Teacherwork" />
+            <marker date="1515848964682" expanded="true" signature="5464:5508" ph="SELECT * FRO... Teacherwork" />
+            <marker date="1515848964682" expanded="true" signature="6100:6144" ph="SELECT * FRO... Teacherwork" />
+            <marker date="1515848964682" expanded="true" signature="6750:6794" ph="SELECT * FRO... Teacherwork" />
+            <marker date="1515848964682" expanded="true" signature="7421:7465" ph="SELECT * FRO... Teacherwork" />
+            <marker date="1515848964682" expanded="true" signature="8071:8115" ph="SELECT * FRO... Teacherwork" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resune.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5475">
+          <caret line="219" column="67" lean-forward="false" selection-start-line="219" selection-start-column="67" selection-end-line="219" selection-end-column="67" />
+          <folding>
+            <marker date="1515938908155" expanded="true" signature="4992:4996" ph="..." />
+            <marker date="1515938908155" expanded="true" signature="6501:6540" ph="SELECT * FRO... resume" />
+            <marker date="1515938908155" expanded="true" signature="7686:7725" ph="SELECT * FRO... resume" />
+            <marker date="1515938908155" expanded="true" signature="8881:8920" ph="SELECT * FRO... resume" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resuneDelet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2175">
+          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <marker date="1515848777470" expanded="true" signature="4515:4543" ph="SELECT * FRO... Introduction" />
+            <marker date="1515848777470" expanded="true" signature="11351:11368" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="11473:11490" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="11593:11610" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="11713:11730" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="11835:11852" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="11957:11974" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="12081:12098" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="12202:12219" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="12322:12339" ph="..." />
+            <marker date="1515848777470" expanded="true" signature="12442:12459" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adminadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="78" lean-forward="false" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+          <folding>
+            <marker date="1515942792682" expanded="true" signature="225:306" ph="INSERT INTO Administration... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AdminDelet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="78" lean-forward="false" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+          <folding>
+            <marker date="1515943600825" expanded="true" signature="171:214" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Administrative services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="284" column="23" lean-forward="false" selection-start-line="284" selection-start-column="23" selection-end-line="284" selection-end-column="23" />
+          <folding>
+            <marker date="1515944341868" expanded="true" signature="5772:5819" ph="SELECT * FRO... Administration" />
+            <marker date="1515944341868" expanded="true" signature="6884:6931" ph="SELECT * FRO... Administration" />
+            <marker date="1515944341868" expanded="true" signature="7991:8038" ph="SELECT * FRO... Administration" />
+            <marker date="1515944341868" expanded="true" signature="9098:9145" ph="SELECT * FRO... Administration" />
+            <marker date="1515944341868" expanded="true" signature="10205:10252" ph="SELECT * FRO... Administration" />
+            <marker date="1515944341868" expanded="true" signature="11312:11359" ph="SELECT * FRO... Administration" />
+            <marker date="1515944341868" expanded="true" signature="12419:12466" ph="SELECT * FRO... Administration" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Excuteadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1515986869581" expanded="true" signature="339:492" ph="INSERT INTO Academic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcuteDelet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <marker date="1515985650874" expanded="true" signature="171:207" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Execute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="166" column="25" lean-forward="true" selection-start-line="150" selection-start-column="23" selection-end-line="166" selection-end-column="25" />
+          <folding>
+            <marker date="1515987335760" expanded="true" signature="5912:5952" ph="SELECT * FRO... Project" />
+            <marker date="1515987335760" expanded="true" signature="7594:7634" ph="SELECT * FRO... Project" />
+            <marker date="1515987335760" expanded="true" signature="9256:9296" ph="SELECT * FRO... Project" />
+            <marker date="1515987335760" expanded="true" signature="10911:10951" ph="SELECT * FRO... Project" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AcademicDelet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1515826604000" expanded="true" signature="172:209" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Academic service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="279" column="89" lean-forward="false" selection-start-line="278" selection-start-column="32" selection-end-line="279" selection-end-column="89" />
+          <folding>
+            <marker date="1515944366810" expanded="true" signature="5693:5734" ph="SELECT * FRO... Academic" />
+            <marker date="1515944366810" expanded="true" signature="7081:7122" ph="SELECT * FRO... Academic" />
+            <marker date="1515944366810" expanded="true" signature="8469:8510" ph="SELECT * FRO... Academic" />
+            <marker date="1515944366810" expanded="true" signature="9857:9898" ph="SELECT * FRO... Academic" />
+            <marker date="1515944366810" expanded="true" signature="11243:11284" ph="SELECT * FRO... Academic" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PostDelet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <marker date="1515989467535" expanded="true" signature="171:207" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Academicadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="74" />
+          <folding>
+            <marker date="1515990538721" expanded="true" signature="226:239" ph="INSERT INTO Academic... " />
+            <marker date="1515990538721" expanded="true" signature="226:301" ph="INSERT INTO Academic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Postgraduate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="157" column="59" lean-forward="false" selection-start-line="157" selection-start-column="59" selection-end-line="157" selection-end-column="59" />
+          <folding>
+            <marker date="1515990577805" expanded="true" signature="4970:4993" ph="SELECT * FRO... Project" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Postadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <marker date="1515990612230" expanded="true" signature="309:440" ph="INSERT INTO Student... " />
           </folding>
         </state>
       </provider>

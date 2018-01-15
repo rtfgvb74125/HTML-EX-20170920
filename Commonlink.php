@@ -23,10 +23,12 @@ session_start();
         .content{
             font-family: "wcl-07";
             font-weight: 700;
+            font-size: 1.25em;
         }
         li{
             font-family: "wcl-07";
             font-weight: 700;
+            font-size: 1.25em;
         }
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {

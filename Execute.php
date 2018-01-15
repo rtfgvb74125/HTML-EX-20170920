@@ -6,6 +6,7 @@
  * Time: 下午 11:04
  */
 include ("funtion.php");
+include ('mysql_connect.inc.php');
 session_start();
 ?>
 <!doctype html>
@@ -28,10 +29,12 @@ session_start();
             .content{
                 font-family: "wcl-07";
                 font-weight: 700;
+                font-size: 1.25em;
             }
             li{
                 font-family: "wcl-07";
                 font-weight: 700;
+                font-size: 1.25em;
             }
             /* Remove the navbar's default margin-bottom and rounded borders */
             .navbar {
@@ -122,6 +125,12 @@ session_start();
             <li><a href="#tab_b" data-toggle="pill">國科會大專學生研究計畫(指導教授)</a></li>
             <li><a href="#tab_c" data-toggle="pill">國科會計畫(共同主持人)</a></li>
             <li><a href="#tab_d" data-toggle="pill">產學合作計畫</a></li>
+            <?php
+            if(isset($_SESSION['username'])){
+                echo '<li><a href="#set" data-toggle="pill">新增</a></li>';
+            }
+            ?>
+
         </ul>
         <div class="col-sm-8 text-left">
             <h1 style="color: #ff1a1e">執行計畫</h1>
@@ -131,255 +140,192 @@ session_start();
             <div class="tab-content col-md-10">
                 <div class="tab-pane active" id="tab_a">
                     <h4>科技部計畫(主持人)</h4>
-                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="850">
                         <tr bgcolor="aqua">
                             <th width="10%" >計畫年度</th>
                             <th width="10%">主持人</th>
                             <th width="30%">執行機關名稱</th>
                             <th width="50%" align="center">內容</th>
                         </tr>
-                        <tr>
-                            <td align="center">97</td>
-                            <td align="center">時文中</td>
-                            <td align="center">
-                                <p>亞洲大學行動商務與多媒體應用學系</p>
-                            </td>
-                            <td>
-                                <p>計畫名稱：我適合就讀資訊系嗎？資訊學系探索遊戲之研製與歷程分析</p>
-                                <p>成果報告：<img src="http://statistics.most.gov.tw/was2/images/Award/pdf.gif"></p>
-                                <p>執行起迄：2008/11/01~2009/07/31</p>
-                                <p>總核定金額：374,000元 </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">98</td>
-                            <td align="center">時文中</td>
-                            <td align="center">
-                                <p>	亞洲大學行動商務與多媒體應用學系</p>
-                            </td>
-                            <td>
-                                <p>計畫名稱：以互動式照片標籤法探尋學習者意向之研究—應用於環境感知的唐詩教學</p>
-                                <p>成果報告：<img src="http://statistics.most.gov.tw/was2/images/Award/pdf.gif"></p>
-                                <p>執行起迄：2009/08/01~2010/07/31</p>
-                                <p>總核定金額：455,000元 </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">99</td>
-                            <td align="center">時文中</td>
-                            <td align="center"><p>亞洲大學行動商務與多媒體應用學系</p>
-                            </td>
-                            <td>
-                                <p>計畫名稱：以維基式評量題庫支援課輔志工之成效研究－應用於低成就學童之數學課輔</p>
-                                <p>成果報告：<img src="http://statistics.most.gov.tw/was2/images/Award/pdf.gif"></p>
-                                <p>執行起迄：2010/08/01~2011/07/31</p>
-                                <p>總核定金額：519,000元</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">100</td>
-                            <td align="center">時文中</td>
-                            <td align="center">亞洲大學行動商務與多媒體應用學系</td>
-                            <td>
-                                <p>	計畫名稱：雲端課輔服務學習平台之研製－應用於國小數學課輔志工訓練與評量</p>
-                                <p>成果報告：<img src="http://statistics.most.gov.tw/was2/images/Award/pdf.gif"></p>
-                                <p>執行起迄：2011/08/01~2013/07/31</p>
-                                <p>總核定金額：1,599,000元</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">101</td>
-                            <td align="center">時文中</td>
-                            <td align="center">	亞洲大學行動商務與多媒體應用學系</td>
-                            <td>
-                                <p>計畫名稱：利用大眾分類標籤進行雲端學習歷程評量之研究－應用於數學課輔志工訓練</p>
-                                <p>成果報告：<img src="http://statistics.most.gov.tw/was2/images/Award/pdf.gif"></p>
-                                <p>執行起迄：2012/08/01~2013/07/31</p>
-                                <p>總核定金額：334,000元 </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">102</td>
-                            <td align="center">時文中</td>
-                            <td align="center">亞洲大學行動商務與多媒體應用學系</td>
-                            <td>
-                                <p>計畫名稱：以群眾外包製作大量低成本APP虛擬教具支援數學課輔與歷程評量之研究—模式建立、軟體實作及實證評估</p>
-                                <p>成果報告：<img src="http://statistics.most.gov.tw/was2/images/Award/pdf.gif"></p>
-                                <p>執行起迄：</p>
-                                <p>總核定金額：702,000元 </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">103</td>
-                            <td align="center">時文中</td>
-                            <td align="center">亞洲大學行動商務與多媒體應用學系</td>
-                            <td>
-                                <p>計畫名稱：翻轉課輔：悅趣式診斷評量App應用於數學課輔前測之研究</p>
-                                <p>成果報告：暫不公開</p>
-                                <p>執行起迄：</p>
-                                <p>總核定金額：425,000元 </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">104</td>
-                            <td align="center">時文中</td>
-                            <td align="center">亞洲大學資訊工程學系</td>
-                            <td>
-                                <p>計畫名稱：過程導向之程式能力電腦輔助評量方法之設計與評估</p>
-                                <p>成果報告：未達繳交期限</p>
-                                <p>執行起迄：</p>
-                                <p>總核定金額：506,000元</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">104</td>
-                            <td align="center">時文中</td>
-                            <td align="center">亞洲大學資訊工程學系</td>
-                            <td>
-                                <p>計畫名稱：範例引導式程式設計學習APP之研製</p>
-                                <p>成果報告：未達繳交期限</p>
-                                <p>執行起迄：</p>
-                                <p>總核定金額：1,200,000元</p>
-                            </td>
-                        </tr>
+                        <?php
+                        $query = "SELECT * FROM `Project` WHERE `type`='0' ";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo '<tr>';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                echo '<td>'.$row[3].'</td>';
+                                echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
                     </table>
                 </div>
                 <div class="tab-pane" id="tab_b">
                     <h4>國科會大專學生研究計畫(指導教授)</h4>
-                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="850">
                         <tr bgcolor="aqua">
                             <th width="10%" >計畫年度</th>
                             <th width="10%">職務</th>
                             <th width="30%">執行機關名稱</th>
                             <th width="50%" align="center">計畫名稱</th>
                         </tr>
-                        <tr>
-                            <td align="center">101</td>
-                            <td align="center">指導教授</td>
-                            <td align="center">
-                                <p>亞洲大學資訊多媒體應用學系</p>
-                                <p>古伃伶</p>
-                            </td>
-                            <td>
-                                <p>計畫名稱：我適合就讀資訊系嗎？資訊學系探索遊戲之研製與歷程分析</p>
-                                <p>計畫編號：101-2815-C-468-013-S</p>
-                                <p>執行起迄：2012/07/01~2013/02/28</p>
-                                <p>核定金額：47,000元</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">103</td>
-                            <td align="center">指導教授</td>
-                            <td align="center">
-                                <p>	亞洲大學資訊多媒體應用學系</p>
-                                <p>卓依潔</p>
-                            </td>
-                            <td>
-                                <p>計畫名稱：故事敘說動畫應用於國中生情緒管理教學評量之研究</p>
-                                <p>計畫編號：103-2815-C-468-037-U</p>
-                                <p>執行起迄：2014/07/01~2015/02/28</p>
-                                <p>核定金額：47,000元</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">104</td>
-                            <td align="center">指導教授</td>
-                            <td align="center"><p>亞洲大學資訊多媒體應用學系</p><p>李孟軒</p>
-                            </td>
-                            <td>
-                                <p>計畫名稱：悅趣式診斷評量APP之研製與歷程分析</p>
-                                <p>計畫編號：104-2815-C-468-029-U</p>
-                                <p>執行起迄：2015/07/01~2016/02/28</p>
-                                <p>核定金額：48,000元</p>
-                            </td>
-                        </tr>
+                        <?php
+                        $query = "SELECT * FROM `Project` WHERE `type`='1' ";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo '<tr>';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                echo '<td>'.$row[3].'</td>';
+                                echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
 
                     </table>
                 </div>
                 <div class="tab-pane" id="tab_c">
                     <h4>國科會計畫(共同主持人)</h4>
-                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="850">
                         <tr bgcolor="aqua">
                             <th width="10%">計畫年度</th>
                             <th width="10%">職務</th>
                             <th width="30%">執行機關名稱</th>
                             <th width="50%">計畫名稱</th>
                         </tr>
-                        <tr>
-                            <td align="center">100</td>
-                            <td align="center">共同主持人</td>
-                            <td align="center">東海大學</td>
-                            <td>
-                                <p>單一整合型計畫－以問題導向學習模式發展K-16節能減碳教育成效評估及教具研發(1/3)</p>
-                                <p>(NSC 100-3113-S-029-001-)</p>
-                                <p>執行起迄：2011/4/1~2012/3/31</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">100</td>
-                            <td align="center">共同主持人</td>
-                            <td align="center">亞洲大學心理學系</td>
-                            <td>
-                                <p>應用互動式情境遊戲與故事敘說數位平台於青少年衝突管理與情緒管理技巧訓練之成效：自傷與霸凌行為之預防--子計畫四：互動式故事敘說平台之建置與評估-應用於親</p>
-                                <p>密與同儕關係之衝突管理與情緒管理訓練課程</p>
-                                <p>(NSC 100-2632-S-468-001-MY3)</p>
-                                <p>執行起迄：2011/08/01~2014/07/31</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">101</td>
-                            <td align="center">共同主持人</td>
-                            <td align="center">東海大學</td>
-                            <td>
-                                <p>單一整合型計畫--以問題導向學習模式發展K-16節能減碳教育成效評估及教具研發(2/3)</p>
-                                <p>(NSC 101-3113-S-029-001-)</p>
-                                <p>執行起迄：2012/4/1~2013/3/31</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">101</td>
-                            <td align="center">共同主持人</td>
-                            <td align="center">國立臺灣師範大學教育心理與輔導學系
-                                林旻沛</td>
-                            <td>
-                                <p>全國高中生網路成癮盛行率與相關心理社會因素及其應用互動式情境遊戲平台於網路成癮行為預防技巧訓練之成效研究</p>
-                                <p>(NSC 101-2511-S-003-051-)</p>
-                                <p>執行起迄：2012/8/1~2013/7/31</p>
-                            </td>
-                        </tr>
+                        <?php
+                        $query = "SELECT * FROM `Project` WHERE `type`='2' ";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo '<tr>';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                echo '<td>'.$row[3].'</td>';
+                                echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
                     </table>
                 </div>
                 <div class="tab-pane" id="tab_d">
                     <h4>產學合作計畫</h4>
-                    <table class="table-set ; table table-responsiv-sm" border="2" width="800">
+                    <table class="table-set ; table table-responsiv-sm" border="2" width="850">
                         <tr bgcolor="aqua">
-                            <th>計畫年度</th>
-                            <th>職務</th>
-                            <th>執行機關名稱</th>
-                            <th>計畫名稱</th>
+                            <th width="10%">計畫年度</th>
+                            <th width="10%">職務</th>
+                            <th width="30%">執行機關名稱</th>
+                            <th width="50%">計畫名稱</th>
                         </tr>
-                        <tr>
-                            <td align="center">99</td>
-                            <td align="center">協同主持人</td>
-                            <td align="center">亞洲大學資訊多媒體應用學系</td>
-                            <td>
-                                <p>新一代網際網路協定互通認證計畫</p>
-                                <p>產業發展分項子計畫二－IPv6產業人才培育</p>
-                                <p>執行起迄：20100301～20101231</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center">100</td>
-                            <td align="center">主持人</td>
-                            <td align="center">亞洲大學資訊多媒體應用學系</td>
-                            <td>
-                                <p>Internet網路技術發展研討會</p>
-                                <p>執行起迄：20110818～20110821</p>
-                            </td>
-                        </tr>
+                        <?php
+                        $query = "SELECT * FROM `Project` WHERE `type`='3' ";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo '<tr>';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                echo '<td>'.$row[3].'</td>';
+                                echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
                     </table>
                 </div>
-            </div><!-- tab content -->
+                <div class="tab-pane" id="set">
+                    <h3>新增</h3>
+                    <form action="Excuteadd.php" method="post">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >計畫年度 : </label>
+                            <div class="col-md-4">
+                                <input  name="date" type="text" placeholder="計畫年度" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >職務/主持人 : </label>
+                            <div class="col-md-4">
+                                <input  name="people" type="text" placeholder="職務/主持人" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >執行機關名稱 : </label>
+                            <div class="col-md-4">
+                                <input  name="organ" type="text" placeholder="執行機關名稱" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >計畫名稱 : </label>
+                            <div class="col-md-4">
+                                <input  name="title" type="text" placeholder="計畫名稱" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >執行起迄 : </label>
+                            <div class="col-md-4">
+                                <input  name="execution" type="text" placeholder="執行起迄" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >核定金額 : </label>
+                            <div class="col-md-4">
+                                <input  name="money" type="text" placeholder="核定金額" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="store">種類</label>
+                            <div class="col-md-4">
+                                <select  name="type" class="form-control">
+                                    <option value="0">科技部計畫(主持人)</option>
+                                    <option value="1">國科會大專生研究計畫(指導教授)</option>
+                                    <option value="2">國科會計畫(共同主持人)</option>
+                                    <option value="3">產學合作計畫</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success">提交</button>
+                    </form>
+                </div>
+            </div>
 
         </div>
 

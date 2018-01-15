@@ -6,6 +6,7 @@
  * Time: 下午 11:09
  */
 include ("funtion.php");
+include ('mysql_connect.inc.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -23,10 +24,12 @@ session_start();
         .content{
             font-family: "wcl-07";
             font-weight: 700;
+            font-size: 1.25em;
         }
         li{
             font-family: "wcl-07";
             font-weight: 700;
+            font-size: 1.25em;
         }
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -128,52 +131,192 @@ session_start();
                         <li><a data-toggle="tab" href="#7">7.擔任資應系生涯導師</a></li>
                     </ul>
                 </li>
+                <?php
+                if(isset($_SESSION['username'])){
+                    echo '<li><a data-toggle="tab" href="#set">新增</a></li>';
+                }
+                ?>
             </ul>
 
             <div class="tab-content">
                 <div id="1" class="tab-pane fade in active">
-                    <ul style="font-size: 2em">
-                        <li>98學年度大一(多媒體應用組)</li>
-                        <li>99學年度大二(多媒體應用組)</li>
-                        <li>100學年度大三(多媒體應用組)</li>
-                        <li>101學年度大四(多媒體應用組)</li>
-                        <li>102學年度大一(多媒體應用組)</li>
-                    </ul>
+
+                        <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='0'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                        </table>
+
                 </div>
                 <div id="2" class="tab-pane fade">
-                    <ul style="font-size: 2em">
-                        <li>98學年度</li>
-                        <li>101學年度</li>
-                        <li>102學年度</li>
-                    </ul>
+                    <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='1'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                    </table>
                 </div>
                 <div id="3" class="tab-pane fade">
-                    <ul style="font-size: 2em">
-                        <li>102學年度</li>
-                    </ul>
+                    <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='2'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                    </table>
                 </div>
                 <div id="4" class="tab-pane fade">
-                    <ul style="font-size: 2em">
-                        <li>99學年度</li>
-                        <li>100學年度</li>
-                    </ul>
+                    <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='3'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                    </table>
                 </div>
                 <div id="8" class="tab-pane fade">
-                    <ul style="font-size: 2em">
-                        <li>99學年度</li>
-                        <li>100學年度</li>
-                    </ul>
+                    <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='4'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                    </table>
                 </div>
                 <div id="6" class="tab-pane fade">
-                    <ul style="font-size: 2em">
-                        <li>99學年度</li>
-                    </ul>
+                    <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='5'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                    </table>
                 </div>
                 <div id="7" class="tab-pane fade">
-                    <ul style="font-size: 2em">
-                        <li>97學年度</li>
-                        <li>98學年度</li>
-                    </ul>
+                    <table width="500" style="font-size: 1.5em">
+                        <?php
+                        $query = "SELECT * FROM `Administration` WHERE `type`='6'";
+                        if($result = $connect->query($query)){
+                            while ($row = $result->fetch_row()){
+                                echo '<form action="AdminDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                echo '<td>'.$row[1].'</td>';
+                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
+                                }
+                                echo '</tr>';
+                                echo "</form>";
+                            }
+                        }
+                        ?>
+                    </table>
+                </div>
+                <div id="set" class="tab-pane fade">
+                    <h2>新增</h2>
+                    <form action="Adminadd.php" method="post">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >學年度 : </label>
+                            <div class="col-md-4">
+                                <input  name="date" type="text" placeholder="學年度" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >標題(可留空) : </label>
+                            <div class="col-md-4">
+                                <input  name="title" type="text" placeholder="標題" class="form-control input-md">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="store">種類</label>
+                            <div class="col-md-4">
+                                <select  name="type" class="form-control">
+                                    <option value="0">擔任資應系班導</option>
+                                    <option value="1">擔任圖書館推展委員會委員</option>
+                                    <option value="2">擔任研究發展委員會委員</option>
+                                    <option value="3">擔任研究發展處學術發展組組長</option>
+                                    <option value="4">擔任學生事務會議委員</option>
+                                    <option value="5">擔任專利及技術移轉權益委員會委員</option>
+                                    <option value="6">擔任資應系生涯導師</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success">提交</button>
+                    </form>
                 </div>
             </div>
         </div>

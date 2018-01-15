@@ -24,10 +24,12 @@ include ("funtion.php");
         .content{
             font-family: "wcl-07";
             font-weight: 700;
+            font-size: 1.25em;
         }
         li{
             font-family: "wcl-07";
             font-weight: 700;
+            font-size: 1.25em;
         }
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -130,7 +132,7 @@ include ("funtion.php");
                         <li><a href="#blue" data-toggle="tab">5.外校碩士論文口試委員</a></li>
                         <?php
                         if(isset($_SESSION['username'])){
-                            echo ' <li><a href="#set" data-toggle="tab">Set</a></li>';
+                            echo ' <li><a href="#set" data-toggle="tab">新增</a></li>';
                         }
                         ?>
                     </ul>
@@ -243,6 +245,7 @@ include ("funtion.php");
                         </div>
 
                         <div class="tab-pane" id = "set">
+                            <h2>新增</h2>
                             <form action="Academicadd.php" method="post">
 
                                 <div class="form-group">

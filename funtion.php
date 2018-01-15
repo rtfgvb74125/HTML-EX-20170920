@@ -14,6 +14,7 @@ function varbar($flag){
                 <li <?php if($flag==4)echo "class = 'active'"?>><a href="Administrative%20services.php">行政服務</a></li>
                 <li <?php if($flag==5)echo "class = 'active'"?>><a href="Academic%20Works.php">學術著作</a></li>
                 <li <?php if($flag==6)echo "class = 'active'"?>><a href="Execute.php">執行計畫</a></li>
+                <li <?php if($flag==7)echo "class = 'active'"?>><a href="Postgraduate.php">指導研究生</a></li>
                 <li <?php if($flag==8)echo "class = 'active'"?>><a href="Commonlink.php">常用連結</a></li>
             </ul>
    <?php
