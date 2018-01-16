@@ -136,18 +136,25 @@
                         $query = "SELECT * FROM `Student`";
                         if($result = $connect->query($query)){
                             while ($row = $result->fetch_row()){
-                                echo '<form action="PostDelet.php" method="post">';
                                 echo '<tr>';
-                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 echo '<td width="10%" align="center">'.$row[1].'</td>';
                                 echo '<td width="10%" align="center">'.$row[2].'</td>';
                                 echo '<td width="10%" align="center">'.$row[3].'</td>';
                                 echo '<td width="70%">'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                echo '<form action="PostUpdateWeb.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                if (isset($_SESSION['username'])){
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo '</form>';
+                                echo '<form action="PostDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
+
                             }
                         }
                         ?>

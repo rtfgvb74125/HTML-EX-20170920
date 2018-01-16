@@ -151,18 +151,26 @@ session_start();
                         $query = "SELECT * FROM `Project` WHERE `type`='0' ";
                         if($result = $connect->query($query)){
                             while ($row = $result->fetch_row()){
-                                echo '<form action="ExcuteDelet.php" method="post">';
+
                                 echo '<tr>';
-                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 echo '<td>'.$row[1].'</td>';
                                 echo '<td>'.$row[2].'</td>';
                                 echo '<td>'.$row[3].'</td>';
                                 echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                echo '<form action="ExcuteUpdateWeb.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo "</form>";
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
+
                             }
                         }
                         ?>
@@ -181,18 +189,24 @@ session_start();
                         $query = "SELECT * FROM `Project` WHERE `type`='1' ";
                         if($result = $connect->query($query)){
                             while ($row = $result->fetch_row()){
-                                echo '<form action="ExcuteDelet.php" method="post">';
                                 echo '<tr>';
-                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 echo '<td>'.$row[1].'</td>';
                                 echo '<td>'.$row[2].'</td>';
                                 echo '<td>'.$row[3].'</td>';
                                 echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                echo '<form action="ExcuteUpdateWeb.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo "</form>";
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
                             }
                         }
                         ?>
@@ -212,18 +226,24 @@ session_start();
                         $query = "SELECT * FROM `Project` WHERE `type`='2' ";
                         if($result = $connect->query($query)){
                             while ($row = $result->fetch_row()){
-                                echo '<form action="ExcuteDelet.php" method="post">';
                                 echo '<tr>';
-                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 echo '<td>'.$row[1].'</td>';
                                 echo '<td>'.$row[2].'</td>';
                                 echo '<td>'.$row[3].'</td>';
                                 echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                echo '<form action="ExcuteUpdateWeb.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo "</form>";
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
                             }
                         }
                         ?>
@@ -242,18 +262,24 @@ session_start();
                         $query = "SELECT * FROM `Project` WHERE `type`='3' ";
                         if($result = $connect->query($query)){
                             while ($row = $result->fetch_row()){
-                                echo '<form action="ExcuteDelet.php" method="post">';
                                 echo '<tr>';
-                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 echo '<td>'.$row[1].'</td>';
                                 echo '<td>'.$row[2].'</td>';
                                 echo '<td>'.$row[3].'</td>';
                                 echo '<td>'.$row[4].'<br>'.$row[5].'<br>'.$row[6].'</td>';
+                                echo '<form action="ExcuteUpdateWeb.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo "</form>";
+                                echo '<form action="ExcuteDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
                             }
                         }
                         ?>

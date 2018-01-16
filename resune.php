@@ -172,20 +172,29 @@ session_start();
                         $query = "SELECT * FROM `resume` WHERE `type`='0'";
                         if($result = $connect->query($query)){
                             while($row = $result->fetch_row()){
-                                echo '<form action="resuneDelet.php" method="post">';
+
                                 echo '<tr>';
+                                echo '<td width="5%">'.$row[1].'</td>';
+                                echo '<td width="95%">'.$row[2].'</td>';
+                                echo '<form action="resumeUpateWeb.php"method="post">';
                                 echo "<input type='hidden' name='id' value='$row[0]'>";
-                                echo '<td>'.$row[1].'</td>';
-                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo '</form>';
+                                echo '<form action="resuneDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
                             }
                         }
+                        echo '</table>';
+
                         ?>
-                    </table>
+
                 </div>
                 <div class="tab-pane" id="tab_c">
                     <h2 class="h1font">授課課程/Course</h2>
@@ -194,20 +203,28 @@ session_start();
                         $query = "SELECT * FROM `resume` WHERE `type`='1'";
                         if($result = $connect->query($query)){
                             while($row = $result->fetch_row()){
-                                echo '<form action="resuneDelet.php" method="post">';
                                 echo '<tr>';
+                                echo '<td width="5%">'.$row[1].'</td>';
+                                echo '<td width="95%">'.$row[2].'</td>';
+                                echo '<form action="resumeUpateWeb.php"method="post">';
                                 echo "<input type='hidden' name='id' value='$row[0]'>";
-                                echo '<td>'.$row[1].'</td>';
-                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo '</form>';
+                                echo '<form action="resuneDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
+
                             }
                         }
+                        echo '</table>';
                         ?>
-                    </table>
+
 
                 </div>
                 <div class="tab-pane" id="tab_d">
@@ -217,20 +234,27 @@ session_start();
                         $query = "SELECT * FROM `resume` WHERE `type`='2'";
                         if($result = $connect->query($query)){
                             while($row = $result->fetch_row()){
-                                echo '<form action="resuneDelet.php" method="post">';
                                 echo '<tr>';
+                                echo '<td width="5%">'.$row[1].'</td>';
+                                echo '<td width="95%">'.$row[2].'</td>';
+
+                                echo '<form action="resumeUpateWeb.php"method="post">';
                                 echo "<input type='hidden' name='id' value='$row[0]'>";
-                                echo '<td>'.$row[1].'</td>';
-                                echo '<td>'.$row[2].'</td>';
+                                if(isset($_SESSION['username'])) {
+                                    echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                }
+                                echo '</form>';
+                                echo '<form action="resuneDelet.php" method="post">';
+                                echo "<input type='hidden' name='id' value='$row[0]'>";
                                 if(isset($_SESSION['username'])) {
                                     echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                 }
-                                echo '</tr>';
                                 echo "</form>";
+                                echo '</tr>';
                             }
                         }
+                        echo ' </table>';
                         ?>
-                    </table>
                 </div>
                 <div class="tab-pane" id="set">
                     <h2>新增</h2>

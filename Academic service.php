@@ -144,16 +144,22 @@ include ("funtion.php");
                                 $query = "SELECT * FROM `Academic` WHERE `type`='0' ";
                                 if($result = $connect->query($query)){
                                     while ($row = $result->fetch_row()){
-                                        echo '<form action="AcademicDelet.php" method="post">';
                                         echo '<tr>';
+                                        echo '<td width="80%">'.$row[1].'</td>';
+                                        echo '<td width="20%">'.$row[2].'</td>';
+                                        echo '<form action="AcademicUpdateWeb.php"method="post">';
                                         echo "<input type='hidden' name='id' value='$row[0]'>";
-                                        echo '<td>'.$row[1].'</td>';
-                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                        }
+                                        echo '</form>';
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
                                         if(isset($_SESSION['username'])) {
                                             echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                         }
-                                        echo '</tr>';
                                         echo "</form>";
+                                        echo '</tr>';
                                     }
                                 }
                                 ?>
@@ -165,16 +171,22 @@ include ("funtion.php");
                                 $query = "SELECT * FROM `Academic` WHERE `type`='1' ";
                                 if($result = $connect->query($query)){
                                     while ($row = $result->fetch_row()){
-                                        echo '<form action="AcademicDelet.php" method="post">';
                                         echo '<tr>';
+                                        echo '<td width="80%">'.$row[1].'</td>';
+                                        echo '<td width="20%">'.$row[2].'</td>';
+                                        echo '<form action="AcademicUpdateWeb.php"method="post">';
                                         echo "<input type='hidden' name='id' value='$row[0]'>";
-                                        echo '<td>'.$row[1].'</td>';
-                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                        }
+                                        echo '</form>';
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
                                         if(isset($_SESSION['username'])) {
                                             echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                         }
-                                        echo '</tr>';
                                         echo "</form>";
+                                        echo '</tr>';
                                     }
                                 }
                                 ?>
@@ -186,16 +198,22 @@ include ("funtion.php");
                                 $query = "SELECT * FROM `Academic` WHERE `type`='2' ";
                                 if($result = $connect->query($query)){
                                     while ($row = $result->fetch_row()){
-                                        echo '<form action="AcademicDelet.php" method="post">';
                                         echo '<tr>';
+                                        echo '<td width="80%">'.$row[1].'</td>';
+                                        echo '<td width="20%">'.$row[2].'</td>';
+                                        echo '<form action="AcademicUpdateWeb.php"method="post">';
                                         echo "<input type='hidden' name='id' value='$row[0]'>";
-                                        echo '<td>'.$row[1].'</td>';
-                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                        }
+                                        echo '</form>';
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
                                         if(isset($_SESSION['username'])) {
                                             echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                         }
-                                        echo '</tr>';
                                         echo "</form>";
+                                        echo '</tr>';
                                     }
                                 }
                                 ?>
@@ -207,16 +225,22 @@ include ("funtion.php");
                                 $query = "SELECT * FROM `Academic` WHERE `type`='3' ";
                                 if($result = $connect->query($query)){
                                     while ($row = $result->fetch_row()){
-                                        echo '<form action="AcademicDelet.php" method="post">';
                                         echo '<tr>';
+                                        echo '<td width="80%">'.$row[1].'</td>';
+                                        echo '<td width="20%">'.$row[2].'</td>';
+                                        echo '<form action="AcademicUpdateWeb.php"method="post">';
                                         echo "<input type='hidden' name='id' value='$row[0]'>";
-                                        echo '<td>'.$row[1].'</td>';
-                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                        }
+                                        echo '</form>';
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
                                         if(isset($_SESSION['username'])) {
                                             echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                         }
-                                        echo '</tr>';
                                         echo "</form>";
+                                        echo '</tr>';
                                     }
                                 }
                                 ?>
@@ -228,16 +252,22 @@ include ("funtion.php");
                                 $query = "SELECT * FROM `Academic` WHERE `type`='4' ";
                                 if($result = $connect->query($query)){
                                     while ($row = $result->fetch_row()){
-                                        echo '<form action="AcademicDelet.php" method="post">';
                                         echo '<tr>';
+                                        echo '<td width="80%">'.$row[1].'</td>';
+                                        echo '<td width="20%">'.$row[2].'</td>';
+                                        echo '<form action="AcademicUpdateWeb.php"method="post">';
                                         echo "<input type='hidden' name='id' value='$row[0]'>";
-                                        echo '<td>'.$row[1].'</td>';
-                                        echo '<td>'.$row[2].'</td>';
+                                        if(isset($_SESSION['username'])) {
+                                            echo '<td>' . '<button type="submit" class="btn btn-warning ">Update</a></button>' . '</td>';
+                                        }
+                                        echo '</form>';
+                                        echo '<form action="AcademicDelet.php" method="post">';
+                                        echo "<input type='hidden' name='id' value='$row[0]'>";
                                         if(isset($_SESSION['username'])) {
                                             echo '<td>' . '<button type="submit" class="btn btn-danger">Delete</button>' . '</td>';
                                         }
-                                        echo '</tr>';
                                         echo "</form>";
+                                        echo '</tr>';
                                     }
                                 }
                                 ?>
